@@ -1,0 +1,154 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Le but de ce projet est de d\u00e9couvrir le pipeline de d\u00e9velopement d'application sur GPU, si possible pour des applications embarqu\u00e9s,\navec la carte Nvidia TK1, et proposer des projets r\u00e9alisables exploitant au mieux nos nouvelles connaissances.\n\n\nIntitul\u00e9 du projet\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.  \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement  \nde mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.  \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau  \nparadigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.  \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,  \nfaisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n\nL\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la  \npertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).\n\n\n\nYou \ncan\n combine bold and italic",
+            "title": "Home"
+        },
+        {
+            "location": "/#intitule-du-projet",
+            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.  \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement  \nde mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.  \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau  \nparadigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.  \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,  \nfaisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n\nL\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la  \npertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).  You  can  combine bold and italic",
+            "title": "Intitul\u00e9 du projet"
+        },
+        {
+            "location": "/introduction/",
+            "text": "Introduction\n\n\nLa carte NVIDIA TK1 est une carte \u00e9lectronique embarqu\u00e9, poss\u00e9dant une carte graphique puissante pour des applications requ\u00e9rant beaucoup de calculs, dans un temps minime.\n\n\nLes possibilit\u00e9s sont nombreuses, car la capacit\u00e9 de calcul de ce type de cartes permet des applications, notamment dans le domaine du traitement\net de la reconnaissance d'image dans la robotique (en temps r\u00e9el). Des applications en traitement de la parole ou en traductions, en simulations physiques etc..,\nsont aussi envisageable, tant ces domaines n\u00e9cessitent de ressources.",
+            "title": "Introduction"
+        },
+        {
+            "location": "/introduction/#introduction",
+            "text": "La carte NVIDIA TK1 est une carte \u00e9lectronique embarqu\u00e9, poss\u00e9dant une carte graphique puissante pour des applications requ\u00e9rant beaucoup de calculs, dans un temps minime.  Les possibilit\u00e9s sont nombreuses, car la capacit\u00e9 de calcul de ce type de cartes permet des applications, notamment dans le domaine du traitement\net de la reconnaissance d'image dans la robotique (en temps r\u00e9el). Des applications en traitement de la parole ou en traductions, en simulations physiques etc..,\nsont aussi envisageable, tant ces domaines n\u00e9cessitent de ressources.",
+            "title": "Introduction"
+        },
+        {
+            "location": "/tk1/",
+            "text": "Nvidia Jetson TK1\n\n\nCarte semblable au cartes RaspberryPi, a l'exception que la TK1 contient une carte graphique (GPU), un port SATA, mini-PCIe et un ventilateur.\n\nLa Jetson TK1 mesure 5\" x 5\" (127mm x 127mm).  \n\n\nSa puissance lui vient de son composant CPU/GPU/ISP: Le Tegra K1 SOC.\n\nCe dernier contient un GPU NVIDIA Kepler avec 192 c\u0153urs NVIDIA CUDA, et un processeur (CPU) quad-core NVIDIA 4-Plus-1\u2122 ARM  Cortex-A15.\n\nIl possede une m\u00e9moire DRAM de Go en DDR3L.\n\nIl est aliment\u00e9 en 12V DC, pour une consomation d'\u00e9nergie moyenne comprise entre 1 et 5 W.",
+            "title": "Jetson TK1"
+        },
+        {
+            "location": "/tk1/#nvidia-jetson-tk1",
+            "text": "Carte semblable au cartes RaspberryPi, a l'exception que la TK1 contient une carte graphique (GPU), un port SATA, mini-PCIe et un ventilateur. \nLa Jetson TK1 mesure 5\" x 5\" (127mm x 127mm).    Sa puissance lui vient de son composant CPU/GPU/ISP: Le Tegra K1 SOC. \nCe dernier contient un GPU NVIDIA Kepler avec 192 c\u0153urs NVIDIA CUDA, et un processeur (CPU) quad-core NVIDIA 4-Plus-1\u2122 ARM  Cortex-A15. \nIl possede une m\u00e9moire DRAM de Go en DDR3L. \nIl est aliment\u00e9 en 12V DC, pour une consomation d'\u00e9nergie moyenne comprise entre 1 et 5 W.",
+            "title": "Nvidia Jetson TK1"
+        },
+        {
+            "location": "/cpu_gpu/",
+            "text": "CPU/GPU\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.\n\nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.\n\nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.\n\nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.",
+            "title": "CPU/GPU"
+        },
+        {
+            "location": "/cpu_gpu/#cpugpu",
+            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs. \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s. \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul. \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.",
+            "title": "CPU/GPU"
+        },
+        {
+            "location": "/cuda/",
+            "text": "CUDA\n\n\n\nCUDA (Compute Unified Device Architecture), est une technologie d\u00e9velopp\u00e9 par NVIDIA pour ses cartes graphiques en 2007.\n\nElle permet d'acc\u00e9der a la puissance de la carte graphique via une API C, ou des bindings dans des langages plus haut niveau (python-cuda), et a des frameworks(Tensorflow, Caffee).  \n\n\nLes concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc..  \n\n\nBlock/Thread\n\n\nUn programme (s'ex\u00e9cutant sur un CPU) peut avoir besoin d'appeler des calculs qui seront r\u00e9alis\u00e9s par des threads sur le GPU.\n\nPour cela il doit s'arranger pour donner a la carte les zones m\u00e9moires ou sont stock\u00e9s les donn\u00e9es en input, et ou \u00e9crire les donn\u00e9es r\u00e9sultantes.\n\nEnsuite, la fonction est ex\u00e9cut\u00e9 par autant de threads que n\u00e9cessaire.\n\nLes threads sont num\u00e9rot\u00e9s, et ils peuvent acc\u00e9der a leur identifiant. Ainsi, ils peut savoir quelle partie de la m\u00e9moire il peut manipuler.\n\nLes threads sont r\u00e9partis dans des blocks CUDA. Cela sert a partag\u00e9 la m\u00e9moire d'une fa\u00e7on plus efficace. En effet, il existe une hi\u00e9rarchie d'acc\u00e8s \u00e0 la m\u00e9moire.\n\nLa m\u00e9moire propre du thread, la m\u00e9moire partag\u00e9 par tout les blocks du thread, et enfin la m\u00e9moire globale.  \n\n\nExemple de code CUDA\n\n\n#include \nstdio.h\n\n#include \nstdlib.h\n\n#include \ncuda.h\n\n#include \ncuda_runtime.h\n\n\n__global__\nvoid mykernel(float *A1, float *A2, float *R)\n{\n    int p = threadIdx.x;\n    R[p] = A1[p] + A2[p];\n}\n\nint main()\n{\n    float A1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    float A2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };\n    float R[9];\n    int taille_mem = sizeof(float) * 9;\n\n    // on alloue de la memoire sur la carte graphique\n    float *a1_device;\n    float *a2_device;\n    float *r_device;\n    cudaMalloc((void**) \na1_device, taille_mem);\n    cudaMalloc((void**) \na2_device, taille_mem);\n    cudaMalloc((void**) \nr_device, taille_mem);\n\n    // on copie les donnees sur la carte\n    cudaMemcpy(a1_device, A1, taille_mem, cudaMemcpyHostToDevice);\n    cudaMemcpy(a2_device, A2, taille_mem, cudaMemcpyHostToDevice);\n\n    //9 additions, aucune boucle !\n    mykernel\n1, 9\n(a1_device, a2_device, r_device);\n\n    // on recupere le resultat\n    cudaMemcpy(R, r_device, taille_mem, cudaMemcpyDeviceToHost);\n    // sortie \u00e0 l'ecran\n    for(int i = 0; i \n 9; i++) {\n        printf(\"%f\\n\", R[i]);\n    }\n}",
+            "title": "CUDA"
+        },
+        {
+            "location": "/cuda/#cuda",
+            "text": "CUDA (Compute Unified Device Architecture), est une technologie d\u00e9velopp\u00e9 par NVIDIA pour ses cartes graphiques en 2007. \nElle permet d'acc\u00e9der a la puissance de la carte graphique via une API C, ou des bindings dans des langages plus haut niveau (python-cuda), et a des frameworks(Tensorflow, Caffee).    Les concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc..",
+            "title": "CUDA"
+        },
+        {
+            "location": "/cuda/#blockthread",
+            "text": "Un programme (s'ex\u00e9cutant sur un CPU) peut avoir besoin d'appeler des calculs qui seront r\u00e9alis\u00e9s par des threads sur le GPU. \nPour cela il doit s'arranger pour donner a la carte les zones m\u00e9moires ou sont stock\u00e9s les donn\u00e9es en input, et ou \u00e9crire les donn\u00e9es r\u00e9sultantes. \nEnsuite, la fonction est ex\u00e9cut\u00e9 par autant de threads que n\u00e9cessaire. \nLes threads sont num\u00e9rot\u00e9s, et ils peuvent acc\u00e9der a leur identifiant. Ainsi, ils peut savoir quelle partie de la m\u00e9moire il peut manipuler. \nLes threads sont r\u00e9partis dans des blocks CUDA. Cela sert a partag\u00e9 la m\u00e9moire d'une fa\u00e7on plus efficace. En effet, il existe une hi\u00e9rarchie d'acc\u00e8s \u00e0 la m\u00e9moire. \nLa m\u00e9moire propre du thread, la m\u00e9moire partag\u00e9 par tout les blocks du thread, et enfin la m\u00e9moire globale.",
+            "title": "Block/Thread"
+        },
+        {
+            "location": "/cuda/#exemple-de-code-cuda",
+            "text": "#include  stdio.h \n#include  stdlib.h \n#include  cuda.h \n#include  cuda_runtime.h \n\n__global__\nvoid mykernel(float *A1, float *A2, float *R)\n{\n    int p = threadIdx.x;\n    R[p] = A1[p] + A2[p];\n}\n\nint main()\n{\n    float A1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    float A2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };\n    float R[9];\n    int taille_mem = sizeof(float) * 9;\n\n    // on alloue de la memoire sur la carte graphique\n    float *a1_device;\n    float *a2_device;\n    float *r_device;\n    cudaMalloc((void**)  a1_device, taille_mem);\n    cudaMalloc((void**)  a2_device, taille_mem);\n    cudaMalloc((void**)  r_device, taille_mem);\n\n    // on copie les donnees sur la carte\n    cudaMemcpy(a1_device, A1, taille_mem, cudaMemcpyHostToDevice);\n    cudaMemcpy(a2_device, A2, taille_mem, cudaMemcpyHostToDevice);\n\n    //9 additions, aucune boucle !\n    mykernel 1, 9 (a1_device, a2_device, r_device);\n\n    // on recupere le resultat\n    cudaMemcpy(R, r_device, taille_mem, cudaMemcpyDeviceToHost);\n    // sortie \u00e0 l'ecran\n    for(int i = 0; i   9; i++) {\n        printf(\"%f\\n\", R[i]);\n    }\n}",
+            "title": "Exemple de code CUDA"
+        },
+        {
+            "location": "/frameworks/",
+            "text": "Frameworks\n\n\nIl existe de nombreux frameworks de plus haut niveau pour utiliser la puissance des GPU en fonction du domaine d'activit\u00e9.\n\n\nLien externe",
+            "title": "Frameworks"
+        },
+        {
+            "location": "/frameworks/#frameworks",
+            "text": "Il existe de nombreux frameworks de plus haut niveau pour utiliser la puissance des GPU en fonction du domaine d'activit\u00e9.  Lien externe",
+            "title": "Frameworks"
+        },
+        {
+            "location": "/tensorflow/",
+            "text": "Tensorflow\n\n\nTensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015).\n\nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes.\n\nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs).\n\nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.\n\n\nUn concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
+            "title": "Tensorflow"
+        },
+        {
+            "location": "/tensorflow/#tensorflow",
+            "text": "Tensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015). \nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes. \nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs). \nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.  Un concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
+            "title": "Tensorflow"
+        },
+        {
+            "location": "/applications/",
+            "text": "Applications\n\n\nNous listons ici nos diff\u00e9rents points de recherches des applications r\u00e9alisables avec notre \u00e9quipe\n\n\nV\u00e9hicule autonome\n\n\nblqblabla\n\n\nDistributeur de boissons\n\n\nRangement de cannettes automatique\n\n\nDetecteur d'humain\n\n\nDetection d'humain present sur une image\n\n\nDetection de visages ou d'expressions\n\n\nTraitement video temps r\u00e9el",
+            "title": "Applications"
+        },
+        {
+            "location": "/applications/#applications",
+            "text": "Nous listons ici nos diff\u00e9rents points de recherches des applications r\u00e9alisables avec notre \u00e9quipe",
+            "title": "Applications"
+        },
+        {
+            "location": "/applications/#vehicule-autonome",
+            "text": "blqblabla",
+            "title": "V\u00e9hicule autonome"
+        },
+        {
+            "location": "/applications/#distributeur-de-boissons",
+            "text": "Rangement de cannettes automatique",
+            "title": "Distributeur de boissons"
+        },
+        {
+            "location": "/applications/#detecteur-dhumain",
+            "text": "Detection d'humain present sur une image",
+            "title": "Detecteur d'humain"
+        },
+        {
+            "location": "/applications/#detection-de-visages-ou-dexpressions",
+            "text": "",
+            "title": "Detection de visages ou d'expressions"
+        },
+        {
+            "location": "/applications/#traitement-video-temps-reel",
+            "text": "",
+            "title": "Traitement video temps r\u00e9el"
+        },
+        {
+            "location": "/ressources/",
+            "text": "Ressources\n\n\nCi-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:  \n\n\n\n\n\n\nNVIDIA\n\n\n\n\nSite NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.\n\n\n\n\n\n\n\n\nJetsonHacks\n\n\n\n\nSi proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.",
+            "title": "Ressources"
+        },
+        {
+            "location": "/ressources/#ressources",
+            "text": "Ci-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:      NVIDIA   Site NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.     JetsonHacks   Si proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.",
+            "title": "Ressources"
+        },
+        {
+            "location": "/about/",
+            "text": "About\n\n\nProjet d'\u00e9tudes r\u00e9alis\u00e9 \u00e0 l'Universit\u00e9 du Mans, Institut Claude CHAPPE de Octobre 2016 \u00e0 Janvier 2017\n\n\nEquipe\n\n\nMathias DIDIER, Benoit LETAY, Mahamat ANNOUR, Ronan YSEUX\n\n\nEncadrants\n\n\nFlorent Carlier\n\nVal\u00e9rie RENAULT\n\n\nRemerciements",
+            "title": "About"
+        },
+        {
+            "location": "/about/#about",
+            "text": "Projet d'\u00e9tudes r\u00e9alis\u00e9 \u00e0 l'Universit\u00e9 du Mans, Institut Claude CHAPPE de Octobre 2016 \u00e0 Janvier 2017",
+            "title": "About"
+        },
+        {
+            "location": "/about/#equipe",
+            "text": "Mathias DIDIER, Benoit LETAY, Mahamat ANNOUR, Ronan YSEUX",
+            "title": "Equipe"
+        },
+        {
+            "location": "/about/#encadrants",
+            "text": "Florent Carlier \nVal\u00e9rie RENAULT",
+            "title": "Encadrants"
+        },
+        {
+            "location": "/about/#remerciements",
+            "text": "",
+            "title": "Remerciements"
+        }
+    ]
+}
