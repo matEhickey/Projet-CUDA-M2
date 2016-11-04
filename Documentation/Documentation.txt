@@ -1,5 +1,10 @@
 1) Installation de Ubuntu
-- téléchargement du fichier depuis le site internet de Ubuntu (https://www.ubuntu.com/download/desktop)
+- téléchargement du fichier depuis le site du telechargement d'ubuntu 14.04.* (version compatible jetpack le 14/08/16) :
+http://releases.ubuntu.com/trusty/ 
+- choit de la version compatible avec le processeur ( amd64/i386)
+* ubuntu-14.04.4-desktop-amd64.iso      
+$ ubuntu-14.04.4-desktop-i386.iso
+
 - on peut bien verifier si le fichier est bien téléchargé (pas endomagé). Pour se faire, nous utilisons la commande md5 dans mac ou linux (Commande: sudo md5 nom_fichier_image). elle (la commande) traite l'entrée et renvoie un numéro qui est à comparer avec le site de téléchargement.
 - avant de commencer l'installation assurez-vous de flasher ce fichier dans une clé Usb ou de le graver dans un cd ou dvd, pour pouvoir booter dessus(demarrer le système)
 - modifier l'ordre de boot du systéme dans le menu BIOS( mettre USB en premier).
@@ -9,7 +14,7 @@
 
 2) Installation de JetPACK L4T
 
-- téléchargement du fichier depuis le site internet de nvidia(https://developer.nvidia.com/embedded/jetpack)
+- téléchargement du fichier d'installation du JETPACK depuis le site internet de nvidia(https://developer.nvidia.com/embedded/downloads)
 	NB: Il faut avoir un compte pour pouvoir télécharger
 
 - ajout du droit d'execution(Commande: chmod +x nomfichier.run) à la base le fichier n'a pas de droit d'execution.

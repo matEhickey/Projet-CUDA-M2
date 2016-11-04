@@ -1,0 +1,63 @@
+Séance1: Installation de Ubuntu (1).
+
+Mise en place de l'environnement
+- github
+- sharelatex
+- Trello
+- création de groupe facebook
+
+Probléme1: problème d'installation de ubuntu.
+###########################################################################################################################
+
+Séance2:Installation de Ubuntu(2).
+
+Probléme1: problème d'installation de ubuntu.
+	CheckSum
+
+###########################################################################################################################
+Séance3:Installation de JetPackL4T(1).
+
+Probléme2: problème de téléchargement des paquets JetPack
+
+###########################################################################################################################
+
+Séance4:Installation de JetPackL4T(2) & flashage de la carte.
+
+Probléme3: problème d'installation des paquets JetPack.
+
+	l'installation ne marche pas. Pour se faire, nous avons les commandes suivantes 
+
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com votre_n°_de_clé
+
+	sudo apt-get update --fix-missing
+	pour garder certains dependence lorsque le upgrade les supprimes.
+	sudo apt-get dist-upgrade
+
+	Les proxy ne marchent toujours pas. Il faut le forçer en utilisant les commandes ci-dessous.
+
+	cd /etc/apt/apt.conf.d/
+	touch 95proxies
+	Acquire::http::proxy "adresse";
+	Acquire::ftp::proxy "adresse";
+	Acquire::https::proxy "adresse";
+
+	askubuntu.com/questions/164169/unable-to-connect-error-with-apt-get
+
+
+###########################################################################################################################
+
+le flashage de la carte
+
+lsusb | grep -i nv
+
+suivi de entrer
+
+gestion de l'adresse ip: enter cette commande sur un terminal dans la machine hote après qu'elle ai été demarré.
+setxkbmap fr
+
+Gérer la connection internet: Ethernet.
+
+
+sudo dhclient eth0
+ifconfig eth0 192.168.0.1
+
