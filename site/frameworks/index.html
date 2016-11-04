@@ -85,6 +85,13 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architectures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../cuda/">CUDA</a>
         
     </li>
@@ -97,6 +104,14 @@
             <ul>
             
                 <li class="toctree-l3"><a href="#frameworks">Frameworks</a></li>
+                
+                    <li><a class="toctree-l4" href="#bindings">Bindings</a></li>
+                
+                    <li><a class="toctree-l4" href="#librairies">Librairies</a></li>
+                
+                    <li><a class="toctree-l4" href="#frameworks_1">Frameworks</a></li>
+                
+                    <li><a class="toctree-l4" href="#see-also">See Also</a></li>
                 
             
             </ul>
@@ -121,6 +136,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../ressources/">Ressources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../outils/">Outils</a>
         
     </li>
 <li>
@@ -169,8 +191,65 @@
             <div class="section">
               
                 <h1 id="frameworks">Frameworks</h1>
-<p>Il existe de nombreux frameworks de plus haut niveau pour utiliser la puissance des GPU en fonction du domaine d'activité.</p>
-<p><a href="http://mathiasdidier.com">Lien externe</a></p>
+<p>Il existe de nombreux langages , librairies et frameworks avec lequels on peut utiliser la puissance des GPU en fonction de ses besoins.</p>
+<hr />
+<h2 id="bindings">Bindings</h2>
+<h3 id="cuda-c">CUDA C</h3>
+<p>Librairies bas niveau pour l'utilisation des threads CUDA<br />
+<a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">CUDA C Programmming</a></p>
+<h3 id="pycuda">PyCUDA</h3>
+<p>Bindings Python pour les librairies CUDA. Permet d'integrer des kernels CUDA dans du code python<br />
+<a href="https://mathema.tician.de/software/pycuda/">PyCUDA</a></p>
+<hr />
+<h2 id="librairies">Librairies</h2>
+<h3 id="amgx">AmgX</h3>
+<p>Resolveur de problèmes utilisé pour les simulations physique nottament, dans les domaines de l'industrie.<br />
+<a href="https://developer.nvidia.com/amgx">AmgX</a></p>
+<h3 id="cudnn">CuDNN</h3>
+<p>Librairies d'implémentations de réseau neuronnaux de type Deep-Leearning.
+Peut être utilisé pour accélerer le travail d'autre frameworks de machine learning tel que Caffe, Tensorflow, Theano, Torch, CNTK etc..<br />
+<a href="https://developer.nvidia.com/deep-learning-frameworks">Compatibles</a><br />
+<a href="https://developer.nvidia.com/cuDNN">CuDNN</a></p>
+<h3 id="cufft">CuFFT</h3>
+<p>Transformation de Fourrier rapide via GPU<br />
+<a href="https://developer.nvidia.com/cuFFT">CuFFT</a></p>
+<h3 id="index">IndeX</h3>
+<p>Visualisation de données météorologiques.<br />
+<a href="https://developer.nvidia.com/index">Index</a></p>
+<h3 id="nvgraph">NvGRAPH</h3>
+<p>Librairies regroupant des algorythmes d'analyse et traitements de graphes contenant plus de 2 milliars d'arretes.<br />
+<a href="https://developer.nvidia.com/nvGRAPH">Index</a></p>
+<h3 id="cuda-maths-library">CUDA Maths library</h3>
+<p>Ensemble de fonctions mathématiques optimisé pour GPU<br />
+[CUDA Maths library](https://developer.nvidia.com/cuda-math-library</p>
+<h3 id="opencv">OpenCV</h3>
+<p>Librairie Open Source de Vision par ordinateur (Computer Vision), de traitement d'images, et de machine learning<br />
+<a href="https://developer.nvidia.com/opencv">OpenCV</a></p>
+<hr />
+<h2 id="frameworks_1">Frameworks</h2>
+<h3 id="caffe">Caffe</h3>
+<p>Deep-learning framework, optimisé pour GPU<br />
+<a href="http://caffe.berkeleyvision.org/">Caffe</a></p>
+<h3 id="cntk">CNTK</h3>
+<p>Microsoft cognitive Toolkit<br />
+<a href="https://www.microsoft.com/en-us/research/product/cognitive-toolkit/">CNTK</a></p>
+<h3 id="theano">Theano</h3>
+<p>Librairie de calcul mathématiques, notamment multidimensions, optimisé pour les GPU.<br />
+<a href="http://deeplearning.net/software/theano/">Theano</a></p>
+<h3 id="torch">Torch</h3>
+<p>Framework à but scientifique qui supporte de nombreux algorythmes, en optimisant par GPU
+<a href="http://torch.ch/">Torch</a></p>
+<h3 id="tensorflow">Tensorflow</h3>
+<p>Librairie de machine utilisant les ressources matérielles au mieux (possibilité de calculs distribués sur plusieurs GPU).<br />
+<a href="http://tensorflow.org">Tensorflow</a></p>
+<h3 id="keras">Keras</h3>
+<p>Keras est une librairies haut niveau utilisant Tensorflow ou Theanos, pour expérimenter des réseaux neuronaux de manière rapide et instinctive.<br />
+<a href="https://keras.io/">Keras</a></p>
+<h2 id="see-also">See Also</h2>
+<p><a href="https://developer.nvidia.com/gpu-accelerated-libraries">Liste de librairies accélérées par GPU</a><br />
+<a href="https://developer.nvidia.com/deep-learning-frameworks">Liste de frameworks</a>
+<a href="https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software">Comparaison entre différents frameworks de Deep-Learning</a><br />
+<a href="http://www.wangbo.info/img/mlmindmap.png">MindMap de différents modeles d'algorythmes de Machine-Learning</a>  </p>
               
             </div>
           </div>

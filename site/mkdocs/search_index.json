@@ -2,12 +2,17 @@
     "docs": [
         {
             "location": "/",
-            "text": "Le but de ce projet est de d\u00e9couvrir le pipeline de d\u00e9velopement d'application sur GPU, si possible pour des applications embarqu\u00e9s,\navec la carte Nvidia TK1, et proposer des projets r\u00e9alisables exploitant au mieux nos nouvelles connaissances.\n\n\nIntitul\u00e9 du projet\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.  \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement  \nde mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.  \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau  \nparadigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.  \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,  \nfaisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n\nL\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la  \npertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).\n\n\n\nYou \ncan\n combine bold and italic",
+            "text": "Le but de ce projet est de d\u00e9couvrir le pipeline de d\u00e9velopement d'application sur GPU, si possible pour des applications embarqu\u00e9s,\navec la carte Nvidia TK1, et proposer des projets r\u00e9alisables exploitant au mieux nos nouvelles connaissances.\n\n\nIntitul\u00e9 du projet\n\n\nIntitul\u00e9 du projet\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.\n\n\nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement\n\n\nde mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.\n\n\nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau\n\n\nparadigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.\n\n\nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,\n\n\nfaisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n  \n\n\nL\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la\n\n\npertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).\n\n\nYou \ncan\n combine bold and italic\n\nezfezfzefz",
             "title": "Home"
         },
         {
             "location": "/#intitule-du-projet",
-            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.  \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement  \nde mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.  \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau  \nparadigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.  \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,  \nfaisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n\nL\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la  \npertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).  You  can  combine bold and italic",
+            "text": "",
+            "title": "Intitul\u00e9 du projet"
+        },
+        {
+            "location": "/#intitule-du-projet_1",
+            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.  Les programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement  de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.  Le GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau  paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.  Ainsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres,  faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.     L\u2019objectif final du projet est de tendre vers l\u2019\u00e9tude de la faisabilit\u00e9 et la  pertinence d \u2019un portage C/C++ vers le langage CUDA. (Simulation vers Syst\u00e8me).  You  can  combine bold and italic \nezfezfzefz",
             "title": "Intitul\u00e9 du projet"
         },
         {
@@ -32,17 +37,47 @@
         },
         {
             "location": "/cpu_gpu/",
-            "text": "CPU/GPU\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.\n\nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.\n\nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.\n\nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.",
+            "text": "CPU/GPU\n\n\nLa diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs.\n\nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s.\n\nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul.\n\nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.\n\n\n\n\nLes CPU incluent un nombre restreint de c\u0153urs optimis\u00e9s pour le traitement en s\u00e9rie, alors que  \nles GPU int\u00e8grent des milliers de c\u0153urs con\u00e7us pour traiter efficacement de nombreuses t\u00e2ches simultan\u00e9es.\n\n\n\n\nLien",
             "title": "CPU/GPU"
         },
         {
             "location": "/cpu_gpu/#cpugpu",
-            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs. \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s. \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul. \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.",
+            "text": "La diff\u00e9rence de performance entre les CPU et les GPU est due \u00e0 la parall\u00e9lisation des calculs. \nLes programmes s'\u00e9xecutant de maniere classique, cad par un processeurs, se font majoritairement de mani\u00e8re s\u00e9quencielle, malgr\u00e9 les efforts des processeurs multi-coeurs et des programmes multithread\u00e9s. \nLe GPU r\u00e9pond a ce probl\u00e8me en proposant un parall\u00e9lisme extr\u00eame, passant par un nouveau paradigme de programmation, car d\u00e9pendant de l'impl\u00e9mentation mat\u00e9rielle de la carte de calcul. \nAinsi, un GP peut \u00eatre repr\u00e9sent\u00e9 par un grand nombre de processeurs coll\u00e9 les uns \u00e0 cot\u00e9 des autres, faisant des calculs simple, mais de mani\u00e8re totalement parall\u00e8le.   Les CPU incluent un nombre restreint de c\u0153urs optimis\u00e9s pour le traitement en s\u00e9rie, alors que  \nles GPU int\u00e8grent des milliers de c\u0153urs con\u00e7us pour traiter efficacement de nombreuses t\u00e2ches simultan\u00e9es.  Lien",
             "title": "CPU/GPU"
         },
         {
+            "location": "/architecture/",
+            "text": "Architectures GPU Nvidia\n\n\nVoici une liste des architecture de GPU de Nvidia, de la plus ancienne \u00e0 la plus r\u00e9cente.\n\n\n\n\n\n\nTesla\n : 2006\n\nPremier implementation du \n\"Unified Shading Architecture\"\n\n\n\n\n\n\nFermi\n  : 2010\n\nPremier v\u00e9ritable systeme GPU.\n\n\n\n\n\n\nKepler\n  : 2012\n\nMoins couteux en energie, plus performant, et plus facilement programmable\n\n\n\n\n\n\nMaxwell\n : 2014\n\nAmeliorations des Streaming Multiprocessor, et gain en ratio performance/energie\n\n\n\n\n\n\nPascal\n : 2016\n\nAmeliorations des Streaming Multiprocessor, et Graphics Processor Cluster, \n\n\n\n\n\n\nVolta\n  : A venir\n\nDevrait figurer \nHigh Bandwidth Memory\n, \nUnified Memory\n, and \nNVLink\n\n\n\n\n\n\nProcesseurs SoC\n\n\nLes processeurs \nSoC\n sont bas\u00e9 sur un processeur tout en un, comprennant donc plus qu'un simple processeur (en fonction des besoins).\n\nCes derniers sont destin\u00e9 aux appareils mobiles, ou embarqu\u00e9s.\n\nNous ne rentrerons en d\u00e9tails dans cette gamme que dans le cas de la carte Jetson TK1\n\n\nTegra\n\n\nLe processeur Tegra est le composant Nvidia SoC: il contient CPU, GPU, northbridge, southbridge, et une m\u00e9moire primaire.  Les premi\u00e8res g\u00e9n\u00e9rations apparaissent en 2008.\n\n\nTegra K1\n\n\nLe processeur TK1 est l'unit\u00e9 centrale de la carte Jetson TK1. \nIl se base sur l'architecture Kepler. \n\n\nBas\u00e9 sur 4 CPU ARM Cortex-A15 MPCore \u00e0 2,3 GHz et grav\u00e9 en 28 nm en utilisant la technologie trois portes FinFET, il contient 32 ko de cache L1 et supporte jusqu'\u00e0 8 Gio de RAM DDR3. Il contient \u00e9galement un GPU Kepler contenant 192 c\u0153urs CUDA supportant OpenGL ES 3.0 et DirectX 11, et pour la premi\u00e8re fois dans un SoC ARM, OpenGL, en version 4.4. Il supporte une d\u00e9finition 4K Ultra HDTV et un appareil photo jusqu'\u00e0 100MPx.\n  \n\n\nLectures:\n\n\n\n\nFonctionnement interne GPU\n  \n\n\nArchitectures modernes GPU",
+            "title": "Architectures"
+        },
+        {
+            "location": "/architecture/#architectures-gpu-nvidia",
+            "text": "Voici une liste des architecture de GPU de Nvidia, de la plus ancienne \u00e0 la plus r\u00e9cente.    Tesla  : 2006 \nPremier implementation du  \"Unified Shading Architecture\"    Fermi   : 2010 \nPremier v\u00e9ritable systeme GPU.    Kepler   : 2012 \nMoins couteux en energie, plus performant, et plus facilement programmable    Maxwell  : 2014 \nAmeliorations des Streaming Multiprocessor, et gain en ratio performance/energie    Pascal  : 2016 \nAmeliorations des Streaming Multiprocessor, et Graphics Processor Cluster,     Volta   : A venir \nDevrait figurer  High Bandwidth Memory ,  Unified Memory , and  NVLink",
+            "title": "Architectures GPU Nvidia"
+        },
+        {
+            "location": "/architecture/#processeurs-soc",
+            "text": "Les processeurs  SoC  sont bas\u00e9 sur un processeur tout en un, comprennant donc plus qu'un simple processeur (en fonction des besoins). \nCes derniers sont destin\u00e9 aux appareils mobiles, ou embarqu\u00e9s. \nNous ne rentrerons en d\u00e9tails dans cette gamme que dans le cas de la carte Jetson TK1",
+            "title": "Processeurs SoC"
+        },
+        {
+            "location": "/architecture/#tegra",
+            "text": "Le processeur Tegra est le composant Nvidia SoC: il contient CPU, GPU, northbridge, southbridge, et une m\u00e9moire primaire.  Les premi\u00e8res g\u00e9n\u00e9rations apparaissent en 2008.",
+            "title": "Tegra"
+        },
+        {
+            "location": "/architecture/#tegra-k1",
+            "text": "Le processeur TK1 est l'unit\u00e9 centrale de la carte Jetson TK1. \nIl se base sur l'architecture Kepler.   Bas\u00e9 sur 4 CPU ARM Cortex-A15 MPCore \u00e0 2,3 GHz et grav\u00e9 en 28 nm en utilisant la technologie trois portes FinFET, il contient 32 ko de cache L1 et supporte jusqu'\u00e0 8 Gio de RAM DDR3. Il contient \u00e9galement un GPU Kepler contenant 192 c\u0153urs CUDA supportant OpenGL ES 3.0 et DirectX 11, et pour la premi\u00e8re fois dans un SoC ARM, OpenGL, en version 4.4. Il supporte une d\u00e9finition 4K Ultra HDTV et un appareil photo jusqu'\u00e0 100MPx.",
+            "title": "Tegra K1"
+        },
+        {
+            "location": "/architecture/#lectures",
+            "text": "Fonctionnement interne GPU     Architectures modernes GPU",
+            "title": "Lectures:"
+        },
+        {
             "location": "/cuda/",
-            "text": "CUDA\n\n\n\nCUDA (Compute Unified Device Architecture), est une technologie d\u00e9velopp\u00e9 par NVIDIA pour ses cartes graphiques en 2007.\n\nElle permet d'acc\u00e9der a la puissance de la carte graphique via une API C, ou des bindings dans des langages plus haut niveau (python-cuda), et a des frameworks(Tensorflow, Caffee).  \n\n\nLes concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc..  \n\n\nBlock/Thread\n\n\nUn programme (s'ex\u00e9cutant sur un CPU) peut avoir besoin d'appeler des calculs qui seront r\u00e9alis\u00e9s par des threads sur le GPU.\n\nPour cela il doit s'arranger pour donner a la carte les zones m\u00e9moires ou sont stock\u00e9s les donn\u00e9es en input, et ou \u00e9crire les donn\u00e9es r\u00e9sultantes.\n\nEnsuite, la fonction est ex\u00e9cut\u00e9 par autant de threads que n\u00e9cessaire.\n\nLes threads sont num\u00e9rot\u00e9s, et ils peuvent acc\u00e9der a leur identifiant. Ainsi, ils peut savoir quelle partie de la m\u00e9moire il peut manipuler.\n\nLes threads sont r\u00e9partis dans des blocks CUDA. Cela sert a partag\u00e9 la m\u00e9moire d'une fa\u00e7on plus efficace. En effet, il existe une hi\u00e9rarchie d'acc\u00e8s \u00e0 la m\u00e9moire.\n\nLa m\u00e9moire propre du thread, la m\u00e9moire partag\u00e9 par tout les blocks du thread, et enfin la m\u00e9moire globale.  \n\n\nExemple de code CUDA\n\n\n#include \nstdio.h\n\n#include \nstdlib.h\n\n#include \ncuda.h\n\n#include \ncuda_runtime.h\n\n\n__global__\nvoid mykernel(float *A1, float *A2, float *R)\n{\n    int p = threadIdx.x;\n    R[p] = A1[p] + A2[p];\n}\n\nint main()\n{\n    float A1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    float A2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };\n    float R[9];\n    int taille_mem = sizeof(float) * 9;\n\n    // on alloue de la memoire sur la carte graphique\n    float *a1_device;\n    float *a2_device;\n    float *r_device;\n    cudaMalloc((void**) \na1_device, taille_mem);\n    cudaMalloc((void**) \na2_device, taille_mem);\n    cudaMalloc((void**) \nr_device, taille_mem);\n\n    // on copie les donnees sur la carte\n    cudaMemcpy(a1_device, A1, taille_mem, cudaMemcpyHostToDevice);\n    cudaMemcpy(a2_device, A2, taille_mem, cudaMemcpyHostToDevice);\n\n    //9 additions, aucune boucle !\n    mykernel\n1, 9\n(a1_device, a2_device, r_device);\n\n    // on recupere le resultat\n    cudaMemcpy(R, r_device, taille_mem, cudaMemcpyDeviceToHost);\n    // sortie \u00e0 l'ecran\n    for(int i = 0; i \n 9; i++) {\n        printf(\"%f\\n\", R[i]);\n    }\n}",
+            "text": "CUDA\n\n\n\nCUDA (Compute Unified Device Architecture), est une technologie d\u00e9velopp\u00e9 par NVIDIA pour ses cartes graphiques en 2007.\n\nElle permet d'acc\u00e9der a la puissance de la carte graphique via une API C, ou des bindings dans des langages plus haut niveau (python-cuda), et a des frameworks(Tensorflow, Caffee).  \n\n\nLes concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc..  \n\n\nBlock/Thread\n\n\nUn programme (s'ex\u00e9cutant sur un CPU) peut avoir besoin d'appeler des calculs qui seront r\u00e9alis\u00e9s par des threads sur le GPU.\n\nPour cela il doit s'arranger pour donner a la carte les zones m\u00e9moires ou sont stock\u00e9s les donn\u00e9es en input, et ou \u00e9crire les donn\u00e9es r\u00e9sultantes.\n\nEnsuite, la fonction est ex\u00e9cut\u00e9 par autant de threads que n\u00e9cessaire.\n\nLes threads sont num\u00e9rot\u00e9s, et ils peuvent acc\u00e9der a leur identifiant. Ainsi, ils peut savoir quelle partie de la m\u00e9moire il peut manipuler.\n\nLes threads sont r\u00e9partis dans des blocks CUDA. Cela sert a partag\u00e9 la m\u00e9moire d'une fa\u00e7on plus efficace. En effet, il existe une hi\u00e9rarchie d'acc\u00e8s \u00e0 la m\u00e9moire.\n\nLa m\u00e9moire propre du thread, la m\u00e9moire partag\u00e9 par tout les blocks du thread, et enfin la m\u00e9moire globale.  \n\n\nExemple de code CUDA\n\n\n#include \nstdio.h\n\n#include \nstdlib.h\n\n#include \ncuda.h\n\n#include \ncuda_runtime.h\n\n\n__global__\nvoid mykernel(float *A1, float *A2, float *R)\n{\n    int p = threadIdx.x;\n    R[p] = A1[p] + A2[p];\n}\n\nint main()\n{\n    float A1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };\n    float A2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90 };\n    float R[9];\n    int taille_mem = sizeof(float) * 9;\n\n    // on alloue de la memoire sur la carte graphique\n    float *a1_device;\n    float *a2_device;\n    float *r_device;\n    cudaMalloc((void**) \na1_device, taille_mem);\n    cudaMalloc((void**) \na2_device, taille_mem);\n    cudaMalloc((void**) \nr_device, taille_mem);\n\n    // on copie les donnees sur la carte\n    cudaMemcpy(a1_device, A1, taille_mem, cudaMemcpyHostToDevice);\n    cudaMemcpy(a2_device, A2, taille_mem, cudaMemcpyHostToDevice);\n\n    //9 additions, aucune boucle !\n    mykernel\n1, 9\n(a1_device, a2_device, r_device);\n\n    // on recupere le resultat\n    cudaMemcpy(R, r_device, taille_mem, cudaMemcpyDeviceToHost);\n    // sortie \u00e0 l'ecran\n    for(int i = 0; i \n 9; i++) {\n        printf(\"%f\\n\", R[i]);\n    }\n}\n\n\n\nAlternatives\n\n\n\n\nOpenCL\n\nCombinaisons d'API CPU multi-coeurs / GPU\n\n\nSite Nvidia",
             "title": "CUDA"
         },
         {
@@ -61,34 +96,139 @@
             "title": "Exemple de code CUDA"
         },
         {
+            "location": "/cuda/#alternatives",
+            "text": "OpenCL \nCombinaisons d'API CPU multi-coeurs / GPU  Site Nvidia",
+            "title": "Alternatives"
+        },
+        {
             "location": "/frameworks/",
-            "text": "Frameworks\n\n\nIl existe de nombreux frameworks de plus haut niveau pour utiliser la puissance des GPU en fonction du domaine d'activit\u00e9.\n\n\nLien externe",
+            "text": "Frameworks\n\n\nIl existe de nombreux langages , librairies et frameworks avec lequels on peut utiliser la puissance des GPU en fonction de ses besoins.\n\n\n\n\nBindings\n\n\nCUDA C\n\n\nLibrairies bas niveau pour l'utilisation des threads CUDA\n\n\nCUDA C Programmming\n\n\nPyCUDA\n\n\nBindings Python pour les librairies CUDA. Permet d'integrer des kernels CUDA dans du code python\n\n\nPyCUDA\n\n\n\n\nLibrairies\n\n\nAmgX\n\n\nResolveur de probl\u00e8mes utilis\u00e9 pour les simulations physique nottament, dans les domaines de l'industrie.\n\n\nAmgX\n\n\nCuDNN\n\n\nLibrairies d'impl\u00e9mentations de r\u00e9seau neuronnaux de type Deep-Leearning.\nPeut \u00eatre utilis\u00e9 pour acc\u00e9lerer le travail d'autre frameworks de machine learning tel que Caffe, Tensorflow, Theano, Torch, CNTK etc..\n\n\nCompatibles\n\n\nCuDNN\n\n\nCuFFT\n\n\nTransformation de Fourrier rapide via GPU\n\n\nCuFFT\n\n\nIndeX\n\n\nVisualisation de donn\u00e9es m\u00e9t\u00e9orologiques.\n\n\nIndex\n\n\nNvGRAPH\n\n\nLibrairies regroupant des algorythmes d'analyse et traitements de graphes contenant plus de 2 milliars d'arretes.\n\n\nIndex\n\n\nCUDA Maths library\n\n\nEnsemble de fonctions math\u00e9matiques optimis\u00e9 pour GPU\n\n[CUDA Maths library](https://developer.nvidia.com/cuda-math-library\n\n\nOpenCV\n\n\nLibrairie Open Source de Vision par ordinateur (Computer Vision), de traitement d'images, et de machine learning\n\n\nOpenCV\n\n\n\n\nFrameworks\n\n\nCaffe\n\n\nDeep-learning framework, optimis\u00e9 pour GPU\n\n\nCaffe\n\n\nCNTK\n\n\nMicrosoft cognitive Toolkit\n\n\nCNTK\n\n\nTheano\n\n\nLibrairie de calcul math\u00e9matiques, notamment multidimensions, optimis\u00e9 pour les GPU.\n\n\nTheano\n\n\nTorch\n\n\nFramework \u00e0 but scientifique qui supporte de nombreux algorythmes, en optimisant par GPU\n\nTorch\n\n\nTensorflow\n\n\nLibrairie de machine utilisant les ressources mat\u00e9rielles au mieux (possibilit\u00e9 de calculs distribu\u00e9s sur plusieurs GPU).\n\n\nTensorflow\n\n\nKeras\n\n\nKeras est une librairies haut niveau utilisant Tensorflow ou Theanos, pour exp\u00e9rimenter des r\u00e9seaux neuronaux de mani\u00e8re rapide et instinctive.\n\n\nKeras\n\n\nSee Also\n\n\nListe de librairies acc\u00e9l\u00e9r\u00e9es par GPU\n\n\nListe de frameworks\n\n\nComparaison entre diff\u00e9rents frameworks de Deep-Learning\n\n\nMindMap de diff\u00e9rents modeles d'algorythmes de Machine-Learning",
             "title": "Frameworks"
         },
         {
             "location": "/frameworks/#frameworks",
-            "text": "Il existe de nombreux frameworks de plus haut niveau pour utiliser la puissance des GPU en fonction du domaine d'activit\u00e9.  Lien externe",
+            "text": "Il existe de nombreux langages , librairies et frameworks avec lequels on peut utiliser la puissance des GPU en fonction de ses besoins.",
             "title": "Frameworks"
         },
         {
+            "location": "/frameworks/#bindings",
+            "text": "",
+            "title": "Bindings"
+        },
+        {
+            "location": "/frameworks/#cuda-c",
+            "text": "Librairies bas niveau pour l'utilisation des threads CUDA  CUDA C Programmming",
+            "title": "CUDA C"
+        },
+        {
+            "location": "/frameworks/#pycuda",
+            "text": "Bindings Python pour les librairies CUDA. Permet d'integrer des kernels CUDA dans du code python  PyCUDA",
+            "title": "PyCUDA"
+        },
+        {
+            "location": "/frameworks/#librairies",
+            "text": "",
+            "title": "Librairies"
+        },
+        {
+            "location": "/frameworks/#amgx",
+            "text": "Resolveur de probl\u00e8mes utilis\u00e9 pour les simulations physique nottament, dans les domaines de l'industrie.  AmgX",
+            "title": "AmgX"
+        },
+        {
+            "location": "/frameworks/#cudnn",
+            "text": "Librairies d'impl\u00e9mentations de r\u00e9seau neuronnaux de type Deep-Leearning.\nPeut \u00eatre utilis\u00e9 pour acc\u00e9lerer le travail d'autre frameworks de machine learning tel que Caffe, Tensorflow, Theano, Torch, CNTK etc..  Compatibles  CuDNN",
+            "title": "CuDNN"
+        },
+        {
+            "location": "/frameworks/#cufft",
+            "text": "Transformation de Fourrier rapide via GPU  CuFFT",
+            "title": "CuFFT"
+        },
+        {
+            "location": "/frameworks/#index",
+            "text": "Visualisation de donn\u00e9es m\u00e9t\u00e9orologiques.  Index",
+            "title": "IndeX"
+        },
+        {
+            "location": "/frameworks/#nvgraph",
+            "text": "Librairies regroupant des algorythmes d'analyse et traitements de graphes contenant plus de 2 milliars d'arretes.  Index",
+            "title": "NvGRAPH"
+        },
+        {
+            "location": "/frameworks/#cuda-maths-library",
+            "text": "Ensemble de fonctions math\u00e9matiques optimis\u00e9 pour GPU \n[CUDA Maths library](https://developer.nvidia.com/cuda-math-library",
+            "title": "CUDA Maths library"
+        },
+        {
+            "location": "/frameworks/#opencv",
+            "text": "Librairie Open Source de Vision par ordinateur (Computer Vision), de traitement d'images, et de machine learning  OpenCV",
+            "title": "OpenCV"
+        },
+        {
+            "location": "/frameworks/#frameworks_1",
+            "text": "",
+            "title": "Frameworks"
+        },
+        {
+            "location": "/frameworks/#caffe",
+            "text": "Deep-learning framework, optimis\u00e9 pour GPU  Caffe",
+            "title": "Caffe"
+        },
+        {
+            "location": "/frameworks/#cntk",
+            "text": "Microsoft cognitive Toolkit  CNTK",
+            "title": "CNTK"
+        },
+        {
+            "location": "/frameworks/#theano",
+            "text": "Librairie de calcul math\u00e9matiques, notamment multidimensions, optimis\u00e9 pour les GPU.  Theano",
+            "title": "Theano"
+        },
+        {
+            "location": "/frameworks/#torch",
+            "text": "Framework \u00e0 but scientifique qui supporte de nombreux algorythmes, en optimisant par GPU Torch",
+            "title": "Torch"
+        },
+        {
+            "location": "/frameworks/#tensorflow",
+            "text": "Librairie de machine utilisant les ressources mat\u00e9rielles au mieux (possibilit\u00e9 de calculs distribu\u00e9s sur plusieurs GPU).  Tensorflow",
+            "title": "Tensorflow"
+        },
+        {
+            "location": "/frameworks/#keras",
+            "text": "Keras est une librairies haut niveau utilisant Tensorflow ou Theanos, pour exp\u00e9rimenter des r\u00e9seaux neuronaux de mani\u00e8re rapide et instinctive.  Keras",
+            "title": "Keras"
+        },
+        {
+            "location": "/frameworks/#see-also",
+            "text": "Liste de librairies acc\u00e9l\u00e9r\u00e9es par GPU  Liste de frameworks  Comparaison entre diff\u00e9rents frameworks de Deep-Learning  MindMap de diff\u00e9rents modeles d'algorythmes de Machine-Learning",
+            "title": "See Also"
+        },
+        {
             "location": "/tensorflow/",
-            "text": "Tensorflow\n\n\nTensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015).\n\nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes.\n\nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs).\n\nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.\n\n\nUn concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
+            "text": "Tensorflow\n\n\nTensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015).\n\nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes de flows.\n\nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).\n\nLes tenseurs sont des representations interressantes pour l'entrainement de r\u00e9seaux neuronnaux car ils permettents d'applattir facilement les dimensions, et ainsi, gagne en complexit\u00e9.\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs).\n\nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.\n\n\nUn concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
             "title": "Tensorflow"
         },
         {
             "location": "/tensorflow/#tensorflow",
-            "text": "Tensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015). \nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes. \nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs). \nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.  Un concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
+            "text": "Tensorflow est le framework destin\u00e9 aux chercheurs en machine-learning, d\u00e9velopp\u00e9 par Google (Open-source depuis 2015). \nIl permet de cr\u00e9er des mod\u00e8les performants, de mani\u00e8re rapide et flexible, et organis\u00e9 en graphes de flows. \nLes graphes contiennent des noeuds qui permettent des op\u00e9rations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs). \nLes tenseurs sont des representations interressantes pour l'entrainement de r\u00e9seaux neuronnaux car ils permettents d'applattir facilement les dimensions, et ainsi, gagne en complexit\u00e9.\nTensorflow est capable de d\u00e9ployer ses mod\u00e8les sur de nombreuses architecture mat\u00e9rielles (mobiles, avec/sans GPU, serveurs). \nTensorflow est une librairie Python, mais il est pr\u00e9vu pour pouvoir r\u00e9aliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.  Un concurrent a Tensorflow est pr\u00e9sent dans le NVIDIA Jetpack, il s'agit de cuDNN qui fourni des implementations rapides a de nombreuses fonctionalit\u00e9s exploitant pleinement le potentiels des GPU pour le machine-learning.",
             "title": "Tensorflow"
         },
         {
             "location": "/applications/",
-            "text": "Applications\n\n\nNous listons ici nos diff\u00e9rents points de recherches des applications r\u00e9alisables avec notre \u00e9quipe\n\n\nV\u00e9hicule autonome\n\n\nblqblabla\n\n\nDistributeur de boissons\n\n\nRangement de cannettes automatique\n\n\nDetecteur d'humain\n\n\nDetection d'humain present sur une image\n\n\nDetection de visages ou d'expressions\n\n\nTraitement video temps r\u00e9el",
+            "text": "Applications existantes\n\n\nUne liste d'applications en production ou en d\u00e9veloppement : \nLien\n\n\nApplications possibles\n\n\nNous listons ici nos diff\u00e9rents points de recherches des applications r\u00e9alisables avec notre \u00e9quipe\n\n\nV\u00e9hicule autonome\n\n\nblqblabla\n\n\nDistributeur de boissons\n\n\nRangement de cannettes automatique\n\n\nDetecteur d'humain\n\n\nDetection d'humain present sur une image\n\n\nDetection de visages ou d'expressions\n\n\nTraitement video temps r\u00e9el",
             "title": "Applications"
         },
         {
-            "location": "/applications/#applications",
+            "location": "/applications/#applications-existantes",
+            "text": "Une liste d'applications en production ou en d\u00e9veloppement :  Lien",
+            "title": "Applications existantes"
+        },
+        {
+            "location": "/applications/#applications-possibles",
             "text": "Nous listons ici nos diff\u00e9rents points de recherches des applications r\u00e9alisables avec notre \u00e9quipe",
-            "title": "Applications"
+            "title": "Applications possibles"
         },
         {
             "location": "/applications/#vehicule-autonome",
@@ -117,13 +257,38 @@
         },
         {
             "location": "/ressources/",
-            "text": "Ressources\n\n\nCi-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:  \n\n\n\n\n\n\nNVIDIA\n\n\n\n\nSite NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.\n\n\n\n\n\n\n\n\nJetsonHacks\n\n\n\n\nSi proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.",
+            "text": "Ressources\n\n\nCi-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:  \n\n\n\n\n\n\nNVIDIA\n  \n\n\n\n\nSite NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.  \n\n\n\n\n\n\n\n\nCUDA Zone\n\n\n\n\nAccueil d\u00e9veloppeurs Nvidia CUDA  \n\n\n\n\n\n\n\n\nJetsonHacks\n  \n\n\n\n\nSite proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.  \n\n\n\n\n\n\n\n\nSirajology \nYoutube\n / \nGithub\n  \n\n\n\n\nNombreuses vid\u00e9os concernant Tensorflow, et le machine-learning. Sources sur github  \n\n\n\n\n\n\n\n\nMachine/Deep Learning reading-list\n\n\n\n\nListe d'articles scientifiques sur diff\u00e9rents domaines du machine-learning ou deep-learning.",
             "title": "Ressources"
         },
         {
             "location": "/ressources/#ressources",
-            "text": "Ci-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:      NVIDIA   Site NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.     JetsonHacks   Si proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.",
+            "text": "Ci-joint, une liste des ressources qui nous ont \u00e9t\u00e9 utiles:      NVIDIA      Site NVIDIA, contient de multiples documentations a propos des technologies CUDA, et CuDNN. \nContient \u00e9galement les liens vers les diff\u00e9rents outils qu'ils proposent.       CUDA Zone   Accueil d\u00e9veloppeurs Nvidia CUDA       JetsonHacks      Site proposant \u00e9normement de contenu en relation avec les cartes Jetson et leurs applications.       Sirajology  Youtube  /  Github      Nombreuses vid\u00e9os concernant Tensorflow, et le machine-learning. Sources sur github       Machine/Deep Learning reading-list   Liste d'articles scientifiques sur diff\u00e9rents domaines du machine-learning ou deep-learning.",
             "title": "Ressources"
+        },
+        {
+            "location": "/outils/",
+            "text": "Outils\n\n\nCette page regroupe les diff\u00e9rentes instructions pour collaborer sur les outils dans les meilleurs conditions  \n\n\n\n\nGithub\n\n\nPlateforme de gestion de version\n\n\n\n\nInstallation\n\n\n\n\nsudo apt-get install git  \n\n\n\n\n\n\nAjouter le repo\n\n\n\n\ngit remote add upstream https://github.com/matEhickey/Projet-CUDA-M2  \ngit fetch upstream  \n\n\n\n\n\n\nR\u00e9cup\u00e9rer les (nouveaux) fichiers  \n\n\n\n\ngit pull https://github.com/matEhickey/Projet-CUDA-M2\n\n\n\n\n\n\nAjout des changements dans les fichier et dossiers de l'emplacement ou l'on se trouve\n\n\n\n\n    git add .\n\n\n\n\n\n\nCommit des changements (Titre DESCRIPTIF et CLAIR \nOBLIGATOIRE\n, descriptions d\u00e9taill\u00e9s appr\u00e9ci\u00e9s)\n\n\n\n\n    git commit -a\n\n\n\n\n\n\nEnvoi des changements\n\n\n\n\ngit push https://github.com/matEhickey/Projet-CUDA-M2\n\n\n\n\n\n\nMkdocs\n\n\nOutil de production de documentation\n  \n\n\n\n\nInstallation\n\n\n\n\npip install mkdocs\n\n\n\n\n\n\nNouveau projet\n\n\n\n\nmkdocs new projectName\n\n\n\n\n\n\nServe (serveur web de developemment, MAJ auto a partir des fichier .md)\n\n\n\n\nmkdocs serve\n\n\n\n\n\n\nBuild (g\u00e9n\u00e8re site web statique)\n\n\n\n\nmkdocs build\n\n\n\n\n\n\n\n\nMarkdown syntax\n\n\n\n\n\n\nMkdocs configuration\n\n\n\n\n\n\n\n\nSharelatex\n\n\nPlateforme de redaction d'articles collaborative bas\u00e9 sur Latex\n\n\nSharelatex\n\n\nLatex syntax",
+            "title": "Outils"
+        },
+        {
+            "location": "/outils/#outils",
+            "text": "Cette page regroupe les diff\u00e9rentes instructions pour collaborer sur les outils dans les meilleurs conditions",
+            "title": "Outils"
+        },
+        {
+            "location": "/outils/#github",
+            "text": "Plateforme de gestion de version   Installation   sudo apt-get install git     Ajouter le repo   git remote add upstream https://github.com/matEhickey/Projet-CUDA-M2  \ngit fetch upstream     R\u00e9cup\u00e9rer les (nouveaux) fichiers     git pull https://github.com/matEhickey/Projet-CUDA-M2   Ajout des changements dans les fichier et dossiers de l'emplacement ou l'on se trouve       git add .   Commit des changements (Titre DESCRIPTIF et CLAIR  OBLIGATOIRE , descriptions d\u00e9taill\u00e9s appr\u00e9ci\u00e9s)       git commit -a   Envoi des changements   git push https://github.com/matEhickey/Projet-CUDA-M2",
+            "title": "Github"
+        },
+        {
+            "location": "/outils/#mkdocs",
+            "text": "Outil de production de documentation      Installation   pip install mkdocs   Nouveau projet   mkdocs new projectName   Serve (serveur web de developemment, MAJ auto a partir des fichier .md)   mkdocs serve   Build (g\u00e9n\u00e8re site web statique)   mkdocs build    Markdown syntax    Mkdocs configuration",
+            "title": "Mkdocs"
+        },
+        {
+            "location": "/outils/#sharelatex",
+            "text": "Plateforme de redaction d'articles collaborative bas\u00e9 sur Latex  Sharelatex  Latex syntax",
+            "title": "Sharelatex"
         },
         {
             "location": "/about/",

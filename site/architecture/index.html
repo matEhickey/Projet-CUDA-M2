@@ -8,7 +8,7 @@
   
   <meta name="author" content="Mathias DIDIER">
   
-  <title>About - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <title>Architectures - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
   
 
   <link rel="shortcut icon" href="../favicon.ico">
@@ -24,9 +24,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
-    var mkdocs_page_input_path = "about.md";
-    var mkdocs_page_url = "/about/";
+    var mkdocs_page_name = "Architectures";
+    var mkdocs_page_input_path = "architecture.md";
+    var mkdocs_page_url = "/architecture/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -84,8 +84,27 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../architecture/">Architectures</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Architectures</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#architectures-gpu-nvidia">Architectures GPU Nvidia</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#processeurs-soc">Processeurs SoC</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tegra">Tegra</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tegra-k1">Tegra K1</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#lectures">Lectures:</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -133,23 +152,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">About</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#about">About</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#equipe">Equipe</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#encadrants">Encadrants</a></li>
-                
-                    <li><a class="toctree-l4" href="#remerciements">Remerciements</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
         
     </li>
 <li>
@@ -176,7 +180,7 @@
     
       
     
-    <li>About</li>
+    <li>Architectures</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -190,16 +194,49 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="about">About</h1>
-<p>Projet d'études réalisé à l'Université du Mans, Institut Claude CHAPPE de Octobre 2016 à Janvier 2017</p>
-<h1 id="equipe">Equipe</h1>
-<p>Mathias DIDIER, Benoit LETAY, Mahamat ANNOUR, Ronan YSEUX</p>
-<h1 id="encadrants">Encadrants</h1>
-<p>Florent Carlier<br />
-Valérie RENAULT</p>
-<h2 id="remerciements">Remerciements</h2>
-<p><img alt="Logo université du Mans" src="http://www.univ-lemans.fr/skins/um2016/resources/um_img/LOGO_UM_lemansLaval.png" /> <img alt="LIUM" src="http://www-lium.univ-lemans.fr/jep2014/images/logo_lium@2x.png" />
-<img alt="IICC" src="http://ic2.univ-lemans.fr/skins/ic22016/resources/um_img/logoic2.png" /></p>
+                <h1 id="architectures-gpu-nvidia">Architectures GPU Nvidia</h1>
+<p>Voici une liste des architecture de GPU de Nvidia, de la plus ancienne à la plus récente.</p>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tesla_(microarchitecture)">Tesla</a> : 2006<br />
+Premier implementation du <a href="https://en.wikipedia.org/wiki/Unified_shader_model">"Unified Shading Architecture"</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Fermi_(microarchitecture)">Fermi</a>  : 2010<br />
+Premier véritable systeme GPU.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Kepler_(microarchitecture)">Kepler</a>  : 2012<br />
+Moins couteux en energie, plus performant, et plus facilement programmable</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Maxwell_(microarchitecture)">Maxwell</a> : 2014<br />
+Ameliorations des Streaming Multiprocessor, et gain en ratio performance/energie</p>
+</li>
+<li>
+<p><a href="https://fr.wikipedia.org/wiki/Pascal_(architecture_de_carte_graphique)">Pascal</a> : 2016<br />
+Ameliorations des Streaming Multiprocessor, et Graphics Processor Cluster, </p>
+</li>
+<li>
+<p><a href="https://fr.wikipedia.org/wiki/Volta_(architecture)">Volta</a>  : A venir<br />
+Devrait figurer <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory</a>, <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit#Integrated_graphics">Unified Memory</a>, and <a href="https://en.wikipedia.org/wiki/NVLink">NVLink</a></p>
+</li>
+</ul>
+<h1 id="processeurs-soc">Processeurs SoC</h1>
+<p>Les processeurs <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_sur_une_puce">SoC</a> sont basé sur un processeur tout en un, comprennant donc plus qu'un simple processeur (en fonction des besoins).<br />
+Ces derniers sont destiné aux appareils mobiles, ou embarqués.<br />
+Nous ne rentrerons en détails dans cette gamme que dans le cas de la carte Jetson TK1</p>
+<h1 id="tegra"><a href="https://fr.wikipedia.org/wiki/Tegra">Tegra</a></h1>
+<p>Le processeur Tegra est le composant Nvidia SoC: il contient CPU, GPU, northbridge, southbridge, et une mémoire primaire.  Les premières générations apparaissent en 2008.</p>
+<h1 id="tegra-k1"><a href="https://fr.wikipedia.org/wiki/Tegra#Tegra_K1">Tegra K1</a></h1>
+<p>Le processeur TK1 est l'unité centrale de la carte Jetson TK1. 
+Il se base sur l'architecture Kepler. </p>
+<p><em>Basé sur 4 CPU ARM Cortex-A15 MPCore à 2,3 GHz et gravé en 28 nm en utilisant la technologie trois portes FinFET, il contient 32 ko de cache L1 et supporte jusqu'à 8 Gio de RAM DDR3. Il contient également un GPU Kepler contenant 192 cœurs CUDA supportant OpenGL ES 3.0 et DirectX 11, et pour la première fois dans un SoC ARM, OpenGL, en version 4.4. Il supporte une définition 4K Ultra HDTV et un appareil photo jusqu'à 100MPx.</em>  </p>
+<h1 id="lectures">Lectures:</h1>
+<ul>
+<li><a href="http://courses.cs.washington.edu/courses/cse471/13sp/lectures/GPUsStudents.pdf">Fonctionnement interne GPU</a>  </li>
+<li><a href="ftp://download.nvidia.com/developer/cuda/seminar/TDCI_Arch.pdf">Architectures modernes GPU</a></li>
+</ul>
               
             </div>
           </div>
@@ -207,8 +244,10 @@ Valérie RENAULT</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../cuda/" class="btn btn-neutral float-right" title="CUDA">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../outils/" class="btn btn-neutral" title="Outils"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../cpu_gpu/" class="btn btn-neutral" title="CPU/GPU"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -236,8 +275,10 @@ Valérie RENAULT</p>
           <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../outils/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../cpu_gpu/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../cuda/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
