@@ -1,0 +1,20 @@
+site_name: Développement d’applications sous processeur graphique (GPU / CUDA).
+repo_url: https://github.com/matEhickey/Projet-CUDA-M2
+site_description: Documentation projet M2 CUDA
+site_author: Mathias DIDIER
+site_favicon: favicon.ico
+
+pages:
+- Home: index.md
+- Introduction: introduction.md
+- Jetson TK1: tk1.md
+- CPU/GPU: cpu_gpu.md
+- Architectures: architecture.md
+- CUDA: cuda.md
+- Frameworks: frameworks.md
+- Tensorflow: tensorflow.md
+- Applications: applications.md
+- Ressources: ressources.md
+- Outils: outils.md
+- About: about.md
+theme: readthedocs
