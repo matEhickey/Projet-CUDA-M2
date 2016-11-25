@@ -19,6 +19,9 @@ Ameliorations des Streaming Multiprocessor, et Graphics Processor Cluster,
 * [Volta](https://fr.wikipedia.org/wiki/Volta_(architecture))  : A venir  
 Devrait figurer [High Bandwidth Memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory), [Unified Memory](https://en.wikipedia.org/wiki/Graphics_processing_unit#Integrated_graphics), and [NVLink](https://en.wikipedia.org/wiki/NVLink)
 
+Les gains de performance les plus importants constatés entre deux architectures sont quand il y a une diminution de la finesse de gravure, plus la finesse de gravure est basse (16 nm à partir de Pascal) plus les cartes possèdent de transistors sur une même surface. Une baisse ddee la finesse de gravure engendre souvent une baisse de la consommation.
+L'autre point qui permet d'améliorer grandement les performances est le type de mémoire utilisé et la fréquence d'utilisation.
+
 # Processeurs SoC
 Les processeurs [SoC](https://fr.wikipedia.org/wiki/Syst%C3%A8me_sur_une_puce) sont basé sur un processeur tout en un, comprennant donc plus qu'un simple processeur (en fonction des besoins).  
 Ces derniers sont destiné aux appareils mobiles, ou embarqués.  
