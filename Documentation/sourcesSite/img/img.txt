@@ -1,0 +1,1 @@
+This folder contains the different images needed for the documentation
