@@ -6,8 +6,8 @@ Elle permet d'accéder a la puissance de la carte graphique via une API C, ou de
 Les concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc.. 
 
 #Coeurs CUDA
-Les coeurs CUDA sont des unités de calculs pas si différentes que celles sur les cartes AMD (stream processor). Ces deux types d'unités de calculs excellent dans l'éxécution de programme parallèle.
-Les différences notables sont que les coeurs CUDA sont plus gros, plus complexe et tourne sur une fréquence plus élevé. Ainsi on ne peut pas comparer le nombre de coeur entre une carte NVIDIA et AMD car il faut plus d'unités de calculs dans les cartes AMD pour égaler les performances d'une carte NVIDIA.
+Les coeurs CUDA sont des unités de calculs pas si différentes que celles sur les cartes AMD (stream processor). Ces deux types d'unités de calculs excellent dans l'éxécution de programme parallèle.    
+Les différences notables sont que les coeurs CUDA sont plus gros, plus complexe et tourne sur une fréquence plus élevé. Ainsi on ne peut pas comparer le nombre de coeur entre une carte NVIDIA et AMD car il faut plus d'unités de calculs dans les cartes AMD pour égaler les performances d'une carte NVIDIA.  
 Le compilateur CUDA fait moins d'optimisations et laisse la carte NVIDIA assigné les coeurs dont aura besoin le programme.
 Un des points important en faveur de CUDA est le support qu'apporte NVIDIA, c'est pour cela qu'il y a un grand nombre de librairies disponibles pour CUDA.
 
