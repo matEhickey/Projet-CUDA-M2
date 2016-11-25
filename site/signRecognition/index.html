@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Mathias DIDIER">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Reconnaissance des signes - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reconnaissance des signes";
+    var mkdocs_page_input_path = "signRecognition.md";
+    var mkdocs_page_url = "/signRecognition/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../flashage/">Installation TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cpu_gpu/">CPU/GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architectures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cuda/">CUDA</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../frameworks/">Frameworks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tensorflow/">Tensorflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../applications/">Applications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Reconnaissance des signes</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#langage-des-signes">Langage des signes</a></li>
+                
+                    <li><a class="toctree-l4" href="#outils">Outils</a></li>
+                
+                    <li><a class="toctree-l4" href="#workflow">Workflow</a></li>
+                
+                    <li><a class="toctree-l4" href="#premiers-resultats">Premiers Résultats</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ressources/">Ressources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../outils/">Outils</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Reconnaissance des signes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/signRecognition.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="langage-des-signes">Langage des signes</h1>
+<p>Mise en place d'un classifieur d'images pour distinguer les différentes lettres du langages des signes francais, et en réaliser une transcription automatique.</p>
+<p>Il sera, dans un premier temps, classifié les lettres distinguables sans mouvements (le traitement d'images étant moins complexe que le traitement vidéo), et sans les mots/phrases qui possèdent un signe/mouvements chacuns</p>
+<h2 id="outils">Outils</h2>
+<p>Tensorflow<br />
+<a href="https://sites.google.com/site/autosignlan/source/image-data-set">Dataset</a><br />
+Training : <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/image_retraining/retrain.py">retrain.py</a><br />
+Eval : <a href="https://github.com/llSourcell/tensorflow_image_classifier/blob/master/src/py/label_dir.py">label.py</a>  </p>
+<h2 id="workflow">Workflow</h2>
+<p>Utilisation de docker pour développement indépendant de la machine hôte (dans mon cas, depuis windows).<br />
+Le probleme de docker est qu'il ne peut tirer parti du GPU (sur windows!, sur les systemes compatibles, il existe <a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a>, à tester sur la Jetson donc.)  </p>
+<h3 id="docker-quick-start-terminal">Docker (quick start terminal):</h3>
+<pre><code>docker run -it gcr.io/tensorflow/tensorflow:latest-devel   # Crée un container docker qui contient la derniere version de tensorflow/tensorflow  
+mkdir /tf_files   # Crée un dossier pour récuperer les fichiers utiles  
+exit   # Quite la vm pour y lier les tf_files
+
+docker run -it -v $HOME/tf_files:/tf_files gcr.io/tensorflow/tensorflow:latest-devel   # lance le container avec /tf_files en commun avec le pc
+
+# ouverture du terminal du container (si besoin):  
+# docker attach &lt;name&gt;
+
+# Lance l'entrainement sur les fichiers jpg du dossier /tf_files/signSplit      
+cd /tensorflow
+python tensorflow/examples/image_retraining/retrain.py \
+    --bottleneck_dir=/tf_files/bottlenecks \
+    --how_many_training_steps 4000 \
+    --model_dir=/tf_files/inception \
+    --output_graph=/tf_files/retrained_graph.pb \
+    --output_labels=/tf_files/retrained_labels.txt \
+    --image_dir /tf_files/signSplit
+
+# Lance la prédiction
+python /tf_files/label.py /tf_files/sign/&lt;number&gt;.jpg
+</code></pre>
+<h3 id="contenu-de-tf_files">Contenu de tf_files</h3>
+<pre><code>sign/  
+    A/  
+    B/  
+    C/  
+signSplit/  
+    A/  
+    B/  
+    C/
+label_image.py  
+modif.py   # Renomme les fichiers de train  
+splitData.py   # Coupe les données de train
+</code></pre>
+<p>convertion images ppm en jpg</p>
+<pre><code># install imagemagick 
+sudo apt-get install imagemagick
+convert *.ppm %d.jpg
+</code></pre>
+<h2 id="premiers-resultats">Premiers Résultats</h2>
+<p>Une classification sur 3 signes distincts avec environ 100 images pour chaque cas d'entrainement mene a une exactitude (final test accuracy) de 94%  </p>
+<p>D'autres campagnes de tests automatisés seronts à réaliser pour produire des schémas de performances de ce modeles, pour essayer d'en trouver les faiblesses dans notre contexte de la reconnaissance du langages des signes, pour enfin essayer d'augmenter les performances de classification. 
+Les tests s'avèrents relativememnt bons sur le meme dataset (mais des images qu'il n'as pas appris), cependant, apres un test sur une image de l'exterieur du dataset, les resultats sont médiocres.<br />
+Nous avons mis aux point un script de generation de dataset a l'aide de la webcam (linux uniquement, paquets streamer et tkinter necéssaires).<br />
+A tester donc.</p>
+<h3 id="a-voir-pour-la-deuxieme-experimentation">A voir pour la deuxieme expérimentation</h3>
+<p><a href="https://github.com/NVIDIA/nvidia-docker/wiki/Why%20NVIDIA%20Docker">Nvidia docker</a><br />
+Installation de docker sur ubuntu <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">3 versions</a> ou <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04">16.04</a><br />
+<a href="https://github.com/NVIDIA/nvidia-docker">Installation de nvidia-docker</a><br />
+<a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/docker">Tensorflow image on nvidia-docker</a>  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ressources/" class="btn btn-neutral float-right" title="Ressources">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../applications/" class="btn btn-neutral" title="Applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../applications/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ressources/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

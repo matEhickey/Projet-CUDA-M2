@@ -7,20 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Mathias DIDIER">
-  
-  <title>Architectures - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
-  
-
   <link rel="shortcut icon" href="../favicon.ico">
   
-
-  
+  <title>Architectures - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-
   
   <script>
     // Current page data
@@ -31,9 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script>
-  <script src="../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -53,7 +45,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
           
             <li>
     <li class="toctree-l1 ">
@@ -72,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../flashage/">Installation TK1</a>
         
     </li>
 <li>
@@ -139,6 +138,13 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../signRecognition/">Reconnaissance des signes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../ressources/">Ressources</a>
         
     </li>
@@ -183,9 +189,8 @@
     <li>Architectures</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/architecture.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -222,6 +227,8 @@ Ameliorations des Streaming Multiprocessor, et Graphics Processor Cluster, </p>
 Devrait figurer <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory</a>, <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit#Integrated_graphics">Unified Memory</a>, and <a href="https://en.wikipedia.org/wiki/NVLink">NVLink</a></p>
 </li>
 </ul>
+<p>Les gains de performance les plus importants constatés entre deux architectures sont quand il y a une diminution de la finesse de gravure, plus la finesse de gravure est basse (16 nm à partir de Pascal) plus les cartes possèdent de transistors sur une même surface. Une baisse ddee la finesse de gravure engendre souvent une baisse de la consommation.
+L'autre point qui permet d'améliorer grandement les performances est le type de mémoire utilisé et la fréquence d'utilisation.</p>
 <h1 id="processeurs-soc">Processeurs SoC</h1>
 <p>Les processeurs <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_sur_une_puce">SoC</a> sont basé sur un processeur tout en un, comprennant donc plus qu'un simple processeur (en fonction des besoins).<br />
 Ces derniers sont destiné aux appareils mobiles, ou embarqués.<br />
@@ -266,10 +273,10 @@ Il se base sur l'architecture Kepler. </p>
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -282,6 +289,7 @@ Il se base sur l'architecture Kepler. </p>
       
     </span>
 </div>
+    <script src="../js/theme.js"></script>
 
 </body>
 </html>

@@ -8,12 +8,14 @@ pages:
 - Home: index.md
 - Introduction: introduction.md
 - Jetson TK1: tk1.md
+- Installation TK1: flashage.md
 - CPU/GPU: cpu_gpu.md
 - Architectures: architecture.md
 - CUDA: cuda.md
 - Frameworks: frameworks.md
 - Tensorflow: tensorflow.md
 - Applications: applications.md
+- Reconnaissance des signes: signRecognition.md
 - Ressources: ressources.md
 - Outils: outils.md
 - About: about.md

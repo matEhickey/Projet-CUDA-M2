@@ -3,96 +3,112 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/introduction/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/introduction/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/tk1/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/tk1/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/cpu_gpu/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/flashage/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/architecture/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/cpu_gpu/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/cuda/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/architecture/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/frameworks/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/cuda/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/tensorflow/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/frameworks/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/applications/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/tensorflow/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/ressources/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/applications/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/outils/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/signRecognition/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/about/</loc>
-     <lastmod>2016-11-04</lastmod>
+     <loc>/ressources/</loc>
+     <lastmod>2016-11-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/outils/</loc>
+     <lastmod>2016-11-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2016-11-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

@@ -9,7 +9,7 @@
   <meta name="author" content="Mathias DIDIER">
   <link rel="shortcut icon" href="../favicon.ico">
   
-  <title>CPU/GPU - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <title>Installation TK1 - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "CPU/GPU";
-    var mkdocs_page_input_path = "cpu_gpu.md";
-    var mkdocs_page_url = "/cpu_gpu/";
+    var mkdocs_page_name = "Installation TK1";
+    var mkdocs_page_input_path = "flashage.md";
+    var mkdocs_page_url = "/flashage/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -69,22 +69,30 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../flashage/">Installation TK1</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Installation TK1</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#flashage">Flashage</a></li>
+                
+                    <li><a class="toctree-l4" href="#telechargements">Telechargements</a></li>
+                
+                    <li><a class="toctree-l4" href="#lancement-de-jetpack">Lancement de jetpack :</a></li>
+                
+                    <li><a class="toctree-l4" href="#flashage-de-la-carte">Flashage de la carte</a></li>
+                
+                    <li><a class="toctree-l4" href="#installation-des-librairies-sur-la-carte">Installation des librairies sur la carte</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">CPU/GPU</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#cpugpu">CPU/GPU</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../cpu_gpu/">CPU/GPU</a>
         
     </li>
 <li>
@@ -174,10 +182,10 @@
     
       
     
-    <li>CPU/GPU</li>
+    <li>Installation TK1</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/cpu_gpu.md"
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/flashage.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -187,17 +195,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="cpugpu">CPU/GPU</h1>
-<p>La différence de performance entre les CPU et les GPU est due à la parallélisation des calculs.<br />
-Les programmes s'éxecutant de maniere classique, cad par un processeurs, se font majoritairement de manière séquencielle, malgré les efforts des processeurs multi-coeurs et des programmes multithreadés.<br />
-Le GPU répond a ce problème en proposant un parallélisme extrême, passant par un nouveau paradigme de programmation, car dépendant de l'implémentation matérielle de la carte de calcul.<br />
-Ainsi, un GP peut être représenté par un grand nombre de processeurs collé les uns à coté des autres, faisant des calculs simple, mais de manière totalement parallèle.<br />
-<img alt="Comparaison" src="http://blog-test.goldenhelix.com/wp-content/uploads/2010/10/cpu_vs_gpu.png" /></p>
-<pre><code>Les CPU incluent un nombre restreint de cœurs optimisés pour le traitement en série, alors que  
-les GPU intègrent des milliers de cœurs conçus pour traiter efficacement de nombreuses tâches simultanées.
-</code></pre>
-
-<p><a href="http://www.nvidia.fr/object/gpu-computing-fr.html">Lien</a></p>
+                <h1 id="flashage">Flashage</h1>
+<p>Méthode de flashage utilisé durant notre projet</p>
+<h2 id="telechargements">Telechargements</h2>
+<h3 id="jetpack">Jetpack</h3>
+<h3 id="ubuntu">Ubuntu</h3>
+<h2 id="lancement-de-jetpack">Lancement de jetpack :</h2>
+<p>ATTENTION AUX PROXY DE LA FAC
+utiliser les commandes 
+export http=http://proxy.univ-lemans.fr:3128
+export http=http://proxy.univ-lemans.fr:3128
+export http=http://proxy.univ-lemans.fr:3128</p>
+<p>ou bien rajouter ces trois lignes au fichier .bashrc</p>
+<h2 id="flashage-de-la-carte">Flashage de la carte</h2>
+<h2 id="installation-des-librairies-sur-la-carte">Installation des librairies sur la carte</h2>
+<p>ATTENTION AUX PROXY DE LA FAC</p>
               
             </div>
           </div>
@@ -205,10 +217,10 @@ les GPU intègrent des milliers de cœurs conçus pour traiter efficacement de n
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../architecture/" class="btn btn-neutral float-right" title="Architectures">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cpu_gpu/" class="btn btn-neutral float-right" title="CPU/GPU">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../flashage/" class="btn btn-neutral" title="Installation TK1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tk1/" class="btn btn-neutral" title="Jetson TK1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -236,10 +248,10 @@ les GPU intègrent des milliers de cœurs conçus pour traiter efficacement de n
           <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../flashage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../tk1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../cpu_gpu/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

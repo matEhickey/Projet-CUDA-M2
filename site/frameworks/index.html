@@ -7,20 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Mathias DIDIER">
-  
-  <title>Frameworks - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
-  
-
   <link rel="shortcut icon" href="../favicon.ico">
   
-
-  
+  <title>Frameworks - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-
   
   <script>
     // Current page data
@@ -31,9 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script>
-  <script src="../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -53,7 +45,7 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
           
             <li>
     <li class="toctree-l1 ">
@@ -72,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../flashage/">Installation TK1</a>
         
     </li>
 <li>
@@ -135,6 +134,13 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../signRecognition/">Reconnaissance des signes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../ressources/">Ressources</a>
         
     </li>
@@ -179,9 +185,8 @@
     <li>Frameworks</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/frameworks.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -227,29 +232,44 @@ Peut être utilisé pour accélerer le travail d'autre frameworks de machine lea
 <a href="https://developer.nvidia.com/opencv">OpenCV</a></p>
 <hr />
 <h2 id="frameworks_1">Frameworks</h2>
+<p>Exemples de code pour résoudre le probleme de classification de <a href="http://yann.lecun.com/exdb/mnist/">mnist</a></p>
 <h3 id="caffe">Caffe</h3>
 <p>Deep-learning framework, optimisé pour GPU<br />
-<a href="http://caffe.berkeleyvision.org/">Caffe</a></p>
+<a href="http://caffe.berkeleyvision.org/">Caffe</a><br />
+<a href="http://caffe.berkeleyvision.org/gathered/examples/mnist.html">mnist caffee</a><br />
+<a href="https://hub.docker.com/r/kaixhin/caffe/">docker</a>  </p>
 <h3 id="cntk">CNTK</h3>
 <p>Microsoft cognitive Toolkit<br />
-<a href="https://www.microsoft.com/en-us/research/product/cognitive-toolkit/">CNTK</a></p>
+<a href="https://www.microsoft.com/en-us/research/product/cognitive-toolkit/">CNTK</a><br />
+<a href="https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/MLP_MNIST.cntk">mnist cntk</a><br />
+<a href="https://hub.docker.com/r/microsoft/cntk/">docker</a>  </p>
 <h3 id="theano">Theano</h3>
 <p>Librairie de calcul mathématiques, notamment multidimensions, optimisé pour les GPU.<br />
-<a href="http://deeplearning.net/software/theano/">Theano</a></p>
+<a href="http://deeplearning.net/software/theano/">Theano</a><br />
+<a href="https://github.com/lisa-lab/DeepLearningTutorials/blob/master/code/convolutional_mlp.py">mnist theano</a><br />
+<a href="https://hub.docker.com/r/kaixhin/theano/">docker</a>  </p>
 <h3 id="torch">Torch</h3>
-<p>Framework à but scientifique qui supporte de nombreux algorythmes, en optimisant par GPU
-<a href="http://torch.ch/">Torch</a></p>
+<p>Framework à but scientifique qui supporte de nombreux algorythmes, en optimisant par GPU<br />
+<a href="http://torch.ch/">Torch</a><br />
+<a href="https://github.com/torch/demos/blob/master/train-a-digit-classifier/dataset-mnist.lua">mnist torch</a><br />
+<a href="https://hub.docker.com/r/kaixhin/torch/">docker</a>  </p>
 <h3 id="tensorflow">Tensorflow</h3>
 <p>Librairie de machine utilisant les ressources matérielles au mieux (possibilité de calculs distribués sur plusieurs GPU).<br />
-<a href="http://tensorflow.org">Tensorflow</a></p>
+<a href="http://tensorflow.org">Tensorflow</a><br />
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/mnist/mnist.py">mnist tensorflow</a><br />
+<a href="https://hub.docker.com/r/tensorflow/tensorflow/">docker</a>  </p>
 <h3 id="keras">Keras</h3>
 <p>Keras est une librairies haut niveau utilisant Tensorflow ou Theanos, pour expérimenter des réseaux neuronaux de manière rapide et instinctive.<br />
-<a href="https://keras.io/">Keras</a></p>
+<a href="https://keras.io/">Keras</a><br />
+<a href="https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py">mnist keras</a><br />
+<img alt="sortie kerras mnist" src="../img/kerrasMnist.png" />
+<a href="https://hub.docker.com/r/gw000/keras/">docker</a></p>
 <h2 id="see-also">See Also</h2>
 <p><a href="https://developer.nvidia.com/gpu-accelerated-libraries">Liste de librairies accélérées par GPU</a><br />
 <a href="https://developer.nvidia.com/deep-learning-frameworks">Liste de frameworks</a>
 <a href="https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software">Comparaison entre différents frameworks de Deep-Learning</a><br />
-<a href="http://www.wangbo.info/img/mlmindmap.png">MindMap de différents modeles d'algorythmes de Machine-Learning</a>  </p>
+<a href="http://www.wangbo.info/img/mlmindmap.png">MindMap de différents modeles d'algorythmes de Machine-Learning</a><br />
+<a href="http://tflearn.org/">TF Learn</a>  </p>
               
             </div>
           </div>
@@ -279,10 +299,10 @@ Peut être utilisé pour accélerer le travail d'autre frameworks de machine lea
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -295,6 +315,7 @@ Peut être utilisé pour accélerer le travail d'autre frameworks de machine lea
       
     </span>
 </div>
+    <script src="../js/theme.js"></script>
 
 </body>
 </html>
