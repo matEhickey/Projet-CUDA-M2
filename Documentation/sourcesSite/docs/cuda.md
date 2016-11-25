@@ -3,13 +3,18 @@
 CUDA (Compute Unified Device Architecture), est une technologie développé par NVIDIA pour ses cartes graphiques en 2007.  
 Elle permet d'accéder a la puissance de la carte graphique via une API C, ou des bindings dans des langages plus haut niveau (python-cuda), et a des frameworks(Tensorflow, Caffee).  
 
-Les concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc..  
+Les concurrents de CUDA sont OpenCL, Larrabee, ATI Stream etc.. 
+
+#Coeurs CUDA
+Les coeurs CUDA sont des unités de calculs pas si différentes que celles sur les cartes AMD (stream processor). Ces deux types d'unités de calculs excellent dans l'éxécution de programme parallèle.
+Les différences notables sont que les coeurs CUDA sont plus gros, plus complexe et tourne sur une fréquence plus élevé. Ainsi on ne peut pas comparer le nombre de coeur entre une carte NVIDIA et AMD car il faut plus d'unités de calculs dans les cartes AMD pour égaler les performances d'une carte NVIDIA.
+Le compilateur CUDA fait moins d'optimisations et laisse la carte NVIDIA assigné les coeurs dont aura besoin le programme 
 
 #Block/Thread
 Un programme (s'exécutant sur un CPU) peut avoir besoin d'appeler des calculs qui seront réalisés par des threads sur le GPU.  
 Pour cela il doit s'arranger pour donner a la carte les zones mémoires ou sont stockés les données en input, et ou écrire les données résultantes.  
 Ensuite, la fonction est exécuté par autant de threads que nécessaire.  
-Les threads sont numérotés, et ils peuvent accéder a leur identifiant. Ainsi, ils peut savoir quelle partie de la mémoire il peut manipuler.  
+Les threads sont numérotés, et ils peuvent accéder a leur identifiant. Ainsi, il peut savoir quelle partie de la mémoire il peut manipuler.  
 Les threads sont répartis dans des blocks CUDA. Cela sert a partagé la mémoire d'une façon plus efficace. En effet, il existe une hiérarchie d'accès à la mémoire.  
 La mémoire propre du thread, la mémoire partagé par tout les blocks du thread, et enfin la mémoire globale.  
 
