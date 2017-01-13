@@ -12,8 +12,11 @@ Il est alimenté en 12V DC, pour une consomation d'énergie moyenne comprise ent
 **Front panel :** Il contrôle les boutons d'alimentation et de réinitialisation et les LED qui permettent d'obtenir des informations sur l'état de l'ordinateur et l'utilisation du disque dur.
 
 Vert =>  Ce sont les LED d'alimentation qui indiquent si la jetson TK1 est allumé, éteinte ou en veille.
+
 Oranges => Ce sont les LED du disque dur, elles indiquent si le disque dur est en mode écriture ou lecture
+
 Rouge =>  Contrôle le bouton d'alimentation qui permet d'allumer ou éteindre la jetson TK1
+
 Bleu => Gère le bouton de réinitialisation pour redémarrer l'ordinateur
 
 **DB-9 :** Le connecteur DB-9 est une prise analogique comportant 9 broches. Il sert essentiellement dans les liaisons permettant la transmission de données asynchrone. Il était beaucoup utilisé pour des périphériques comme les claviers et les souris. Ce type de port a été remplacé par les ports PS/2 et USB de nos jours.
@@ -46,3 +49,5 @@ pour un Usage Général), ils permettent de pouvoir communiquer avec d'autres ci
 **Reset :** Bouton pour réinitialiser la carte.
 
 **Force recovery :** Bouton pour forcer la carte à se lancer en recovery mode.
+
+Source : [Wiki Jetson TK1](http://elinux.org/Jetson_TK1)   
