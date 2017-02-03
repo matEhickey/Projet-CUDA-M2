@@ -2,7 +2,7 @@
 
 #Structure de CUDA 
 
-##Programming Structure
+##Structure de Programmation
 
 Un programme CUDA est composé de deux composants primaire : un hôte (host) et un device (le GPU). 
 Le code Host tourne sur le CPU, tandis que les fonctions kernel tournent sur le GPU.
@@ -75,7 +75,7 @@ L'indépendance des blocs et des kernel permet à CUDA d'être plus évolutifs e
 
 ##Thread ID
 
-Chaque bloc et chaque hread disposent d'un index qui leur est propre, uniquement accesible depuis un kernel actif.
+Chaque bloc et chaque thread disposent d'un index qui leur est propre, uniquement accesible depuis un kernel actif.
 Les variables blockIdx et threadIdx contiennent ces index.
 threadIdx est un vecteur à trois dimension, tandis que blockIdx est un vecteur à 2 dimensions. L'index threadIdx est donc lui-même le bloc de threads.
 La taille de la grid et d'un bloc est définie respectivement par les variables gridDim et blockDim.
@@ -88,6 +88,33 @@ La taille des warps dépend du matériel, par exemple pour la jetson TK1 chaque 
 Ce sont ces warps qui nous permettent d'obtenir un style d'execution SMT (Single Instruction Multiple-Thread).
 Contrairement au grids et aux blocs, l'implémentation des warps n'est pas accesible aux programmeurs. Cependant, ce modèle d'execution influe sur les performances (plus de détail dans la section Optimisation).
 
+## Hierarchie de la mémoire 
 
+Les threads CUDA ont accès à différents espaces de la mémoire lors de leurs éxecutions. 
+Chaque thread dispose d'un espace mémoire privé qui lui est propre.
+Chaque thread peut aussi accéder à un espace de mémoire partagée avec tout les threads du même bloc ainsi qu'à la mémoire globale (partagée par tout les kernels).
 
+![](/img/)
+
+L'hote et le device maintiennent leurs propres espaces mémoires en DRAM, réfférés en temps qu'host memory et device memory.
+
+##Thrust vector
+
+Thrust est une librarie basée sur la STL (Standard Template Library). Elle offre une interface haut-niveau permettant de programmer plus facilement des applications CUDA.
+
+Thrust fournit deux containeurs vectoriels : host_vector (stocké sur la mémoiré de l'host) et device_vector (stocké sur la mémoire du GPU).
+Ces vecteurs fonctionnent de la même manière que les std::vector disponibles en C++ STL : 
+ce sont des conteneurs géneriques (tout type de donnée) pouvant être redimensionnés dynamiquement.
+Lorsqu'une fonction Thrust est appellée il vérifie automatique le type d'itérateur utilisé pour déterminer si il doit utiliser une implémentation host ou device.
+Ce processus est connu sous le nom de "static dispatching" car  l"implémentation host/device est determinée durant la compilation.
+
+Nous pouvons utiliser des raw_pointers pour accèder aux données sans utiliser les itérateurs.
+
+##Capacité de calcul
+
+La capacité de calcul d'un appareil est représenté par son numéro de version (parfois appellé "SM version").
+Ce numéro de version permet d'identifier le nombre de feature supporté par le hardware GPU et est utilisé par les application à l'éxecution pour déterminer les outils et instructions diposnibles pour le GPU.
+
+Les appareils ayant la même architecture diposent du même niveau de revision.
+Liste des capacités selon les versions : http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capabilities
 
