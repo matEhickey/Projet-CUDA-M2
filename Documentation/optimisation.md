@@ -110,10 +110,46 @@ shared_memory[threadIdx.x]= global_memory[stride*blockIdx.x*blockDim.x + threadI
 
 #Rappel
 
-*La mémoire globale est lente, la mémoire "on-chip" est beaucoup plus rapide
-*Eviter en tout moment la divergence de threads
-*Des accès en mémoire coalescés permettent d'améliorer grandement la performance 
+- La mémoire globale est lente, la mémoire "on-chip" est beaucoup plus rapide
+- Eviter en tout moment la divergence de threads
+- Des accès en mémoire coalescés permettent d'améliorer grandement la performance 
 
+
+
+#Deroulage de boucles
+
+Le deroulage de boucle est une technique d'optimisation consistant à améliorer la vitesse d'execution d'un programme au dépend de sa taille binaire
+Cette amélioration de vitesse s'obtient en réduisant ou en élimant les actions controllant la boucle comme les pointeurs arithmétiques et les tests de fin de boucle à chaque itération,
+ainsi qu'en éliminant les latences de lecture en mémoire.
+
+Exemple de deroulage de boucle simple en C :
+
+~~~
+
+//boucle normale
+ int x;
+ for (x = 0; x < 100; x++)
+ {
+     delete(x);
+ }
+
+//boucle déroulée
+ int x; 
+ for (x = 0; x < 100; x += 5)
+ {
+     delete(x);
+     delete(x + 1);
+     delete(x + 2);
+     delete(x + 3);
+     delete(x + 4);
+ }
+
+~~~
+
+Après cette modification le programme n'effectue que 20 itérations au lieu des 100 précedentes et seulement 20% des branches conditionelles seront prises.
+
+Ce déroulage doit être effectué avec précaution afin que le controle de fin de boucle et le nombre d'opérations à l'intérieur de la boucle concordent :
+Par exemple dans le cas ci dessus, si le nombre d'itérations n'était pas divisible par 5, le programme ne fonctionnerait pas.
 
 
 
