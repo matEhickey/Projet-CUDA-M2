@@ -9,7 +9,7 @@ Les threads d'un bloc sont regroupés en warps de taille fixe pour l'exécution 
 ###IF-THEN-ELSE
 
 
-La construction de code la plus commune qui peut provoquer une divergence de thread sont les branchements conditionnels dans une instruction if-then-else. Si certains threads d'une seule chaîne sont évalués comme «vrais» et d'autres comme «faux», alors les threads «vrai» et «faux» se ramifient à des instructions différentes. Certains threads voudront passer à l'instruction 'then', tandis que d'autres 'else'.
+La construction de code la plus commune qui peut provoquer une divergence de thread sont les branchements conditionnels dans une instruction if-then-else. Si certains threads d'un seul warp sont évalués comme «vrais» et d'autres comme «faux», alors les threads «vrai» et «faux» se ramifient à des instructions différentes. Certains threads voudront passer à l'instruction 'then', tandis que d'autres 'else'.
 
 Intuitivement, nous pensons que les instructions seront exécutés en parallèle. Cependant, les threads dans un block ne peut pas diverger,et donc la parrallelisation est donc impossible.CUDA a une solution de contournement qui corrige le problème, mais avec des conséquences assez négatives sur la performance.
 
@@ -33,7 +33,7 @@ if (threadidx.x <16)
 
 ~~~~
 
-La première partie execute ses instruction puis attend que la seconde partie du block atteigne __syncthread(), cependant la seconde partie ne commence jamais et par conséquent empeche la cloture de la première instruction.
+La première partie execute ses instruction puis attend que la seconde partie du block atteigne __syncthread(), cependant la seconde partie ne commence jamais et par conséquent empeche la cloture de la première instruction. (Nous sommes ici avec des warps de taille > 16 threads).
 
 
 ##Mémoire coalescée
