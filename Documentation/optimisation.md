@@ -48,14 +48,14 @@ Les conditions suivantes peuvent résulter en un accès non-coalescé, le rendan
 
 Ici l'accès est séquentiel et aligné, il est donc coalescé.
 
-Accès séquentiel et aligné: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/asa.png)	
+Accès séquentiel et aligné: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/asa.png?raw=true)	
 
 
 ###Accès aligné mais non séquentiel
 
 Ici l'accès n'est pas séquentiel mais aligné. Sur certaines architectures, principalement les plus anciennes ce genre d'acès ne peut pas être effectué en une seule transaction.
 
-Accès aligné mais non séquentiel: ![Alt]((https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/nca.png)
+Accès aligné mais non séquentiel: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/nca.png?raw=true)
 
 ###Accès mémoire non aligné
 
@@ -85,7 +85,7 @@ Cette restriction est imposé par le device sur lequel la mémoire est alloué, 
 
 
 
-Accès non aligné: ![Alt]((https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/uma.png)
+Accès non aligné: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/uma.png?raw=true)
 
 
 #####Exemple
