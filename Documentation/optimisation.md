@@ -94,7 +94,7 @@ Un accès en mémoire coalescé ressemble à ce genre de code.
 ~~~~
 shared_memory[threadIdx.x]= global_memory[blockIdx.x*blockDim.x + threadIdx.x];
 ~~~~
-L'instruction suivante n'ets quand à elle pas coalescée.
+L'instruction suivante n'est quand à elle pas coalescée.
 ~~~~
 stride=4;
 shared_memory[threadIdx.x]= global_memory[stride*blockIdx.x*blockDim.x + threadIdx.x*stride];
