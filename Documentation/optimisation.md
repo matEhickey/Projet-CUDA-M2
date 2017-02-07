@@ -48,7 +48,7 @@ Les conditions suivantes peuvent résulter en un accès non-coalescé, le rendan
 
 Ici l'accès est séquentiel et aligné, il est donc coalescé.
 
-Accès séquentiel et aligné: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/asa.png?raw=true)	
+Accès séquentiel et aligné: ![Alt](https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/asa.png?raw=true)	
 
 
 ###Accès aligné mais non séquentiel
