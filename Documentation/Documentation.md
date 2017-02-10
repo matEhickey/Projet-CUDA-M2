@@ -90,9 +90,6 @@ ifconfig eth0 192.168.0.1
 gestion de l'adresse ip: enter cette commande sur un terminal dans la machine hote après qu'elle ai été demarré.
 setxkbmap fr
 
-### Séance 4 & 5: Redaction du cahier de charge
-La redaction a été rédigé sur Sharelatex.
-Reunion avec les encadrants & quelques recherches concernant le problème rencontré.
 
 ### seance 6: Installation et Flashage de la carte JETSON TK-1.
 Nous avons recommencer les etapes de la séance 3 qui se sont interrompués à cause du proxy et continuer. JETSON TK-1 telecharge plusieurs fichiers depuis internet pour son fonctionnement interne. Mais il s'arrête à cause du proxy.
@@ -108,10 +105,7 @@ http_proxy "adresse"
 ftp_proxy "adresse"
 https_proxy "adresse"
 Après avoir resolu ce problème l'installation ne s'interromp pas et le flashage est effectif.
-  
-## III - Cahier de Charge
-
-
+ 
 ### Seance 7:activation des 4 cpu de la carte.
 Par defaut un seul CPU est actif. Pour activer les 3 autres, nous utilisons les commandes ci-dessous.
 
@@ -124,6 +118,12 @@ echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern
 
 
 ### Seance 8: 
+## III - Cahier de Charge
+### Séance 4 & 5: Redaction du cahier de charge
+La redaction a été rédigé sur Sharelatex.
+Reunion avec les encadrants & quelques recherches concernant le problème rencontré.
+
+
 
 ## IV - Decouvert de Cuda
 ### 1 - Syntaxe
