@@ -1,4 +1,4 @@
-## Projet CUDA M2
+## I - Projet CUDA M2
 
 
 
@@ -27,7 +27,7 @@ http://releases.ubuntu.com/trusty/
 
 
 
-## Installation de JetPACK L4T
+## II - Installation de JetPACK L4T
 ### Séance3:Telechargement de JetPackL4T.
 
 #### Probléme2: problème de téléchargement des paquets JetPack. 
@@ -79,7 +79,7 @@ ifconfig eth0 192.168.0.1
 gestion de l'adresse ip: enter cette commande sur un terminal dans la machine hote après qu'elle ai été demarré.
 setxkbmap fr
   
-## Cahier de Charge
+## III - Cahier de Charge
 
 ### Séance 4 & 5: Redaction du cahier de charge
 
@@ -109,17 +109,17 @@ echo 1 > /sys/devices/system/cpu/cpu2/online
 echo 1 > /sys/devices/system/cpu/cpu3/online
 echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern
 
-## Decouvert de Cuda
-### Syntaxe
-### Sémantique
+## IV - Decouvert de Cuda
+### 1 - Syntaxe
+### 2 - Sémantique
 
-## Proof of Concept
-1 - TRESHOLD
-2 - Contrours
-3 - Force Brut
-4 - Optimisation de la reduction d'un vecteur
+## V - Proof of Concept
+### 1 - TRESHOLD
+### 2 - Contrours
+### 3 - Force Brut
+### 4 - Optimisation de la reduction d'un vecteur
 
-## Découverte des frameworks
+## VI - Découverte des frameworks
 ### Tensorflow
 ### TFlearn
 ### Tegra
