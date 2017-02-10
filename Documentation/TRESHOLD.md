@@ -1,4 +1,4 @@
-### prouf of concept
+### proof of concept
 
 
 ## TRESHOLD.
