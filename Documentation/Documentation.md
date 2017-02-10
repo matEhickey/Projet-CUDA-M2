@@ -218,7 +218,8 @@ les 3 etapes pour
 Nous prenons un simple exemple de multiplication de deux matrices qui disponible sur le site de tensorflow. 
 
 
-```import tensorflow as tf
+```python
+import tensorflow as tf
 
 #construction du graphe de calcul
 matrix1 = tf.constant([[3., 3.]])
