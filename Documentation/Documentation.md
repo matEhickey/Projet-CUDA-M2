@@ -31,13 +31,13 @@ http://releases.ubuntu.com/trusty/
 ### Séance3:Telechargement de JetPackL4T.
 
 #### Probléme2: problème de téléchargement des paquets JetPack. 
-ce problème est lié au problèmes de proxy.
+	ce problème est lié au problèmes de proxy.
 
 
 ### Séance4:Installation de JetPackL4T & flashage de la carte.
 
 #### Probléme3: problème d'installation des paquets JetPack.
-La connexion internet bloque systématiquement le téléchargement de paquets depuis internet si le proxy de la fac n'est pas correctement renseigné.
+	La connexion internet bloque systématiquement le téléchargement de paquets depuis internet si le proxy de la fac n'est pas correctement renseigné.
 
 l'installation ne marche pas. Pour se faire, nous avons les commandes suivantes 
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com votre_n°_de_clé
@@ -71,8 +71,7 @@ export https_proxy='adresse à saisir'
 export ftp_proxy='adresse à saisir'
   
 #### Problème4: problème de flash de la carte.
-la machine n'arrive pas à donner une adresse ip à la carte car celle-ci n'est pas connu par le réseau.
-Nous avons essayer plusieurs techniques en vain. Il a fallu faire part à l'administrateur reseau pour résoudre ce probleme. Ci-dessous quelques commande qu'on a utilisé mais qui n'ont pas abouti.
+	la machine n'arrive pas à donner une adresse ip à la carte car celle-ci n'est pas connu par le réseau. Nous avons essayer plusieurs techniques en vain. Il a fallu faire part à l'administrateur reseau pour résoudre ce probleme. Ci-dessous quelques commande qu'on a utilisé mais qui n'ont pas abouti.
 
 sudo dhclient eth0
 ifconfig eth0 192.168.0.1
@@ -90,7 +89,7 @@ Reunion avec les encadrants & quelques recherches concernant le problème rencon
 Un nouveau terminal s'ouvre et il suffit de suivre les etapes 
 
 #### Problème5: problème de flash de la carte (1).
-Pour resoudre definitivement le problème de proxy, nous avons editer le fichier .bashrc et nous lui avons ajouter à la fin les lignes suivantes.
+	Pour resoudre definitivement le problème de proxy, nous avons editer le fichier .bashrc et nous lui avons ajouter à la fin les lignes suivantes.
 
 http_proxy "adresse"
 ftp_proxy "adresse"
@@ -105,7 +104,7 @@ Par defaut un seul CPU est actif. Pour activer les 3 autres, nous utilisons les 
 
 echo 0 > /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/enable
 echo 1 > /sys/devices/system/cpu/cpu0/online
-#echo 1 > /sys/devices/system/cpu/cpu1/online
+echo 1 > /sys/devices/system/cpu/cpu1/online
 echo 1 > /sys/devices/system/cpu/cpu2/online
 echo 1 > /sys/devices/system/cpu/cpu3/online
 echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern
