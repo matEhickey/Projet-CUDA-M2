@@ -1,4 +1,4 @@
-<-- source : https://cvw.cac.cornell.edu/gpu -->
+
 
 #Structure de CUDA 
 
