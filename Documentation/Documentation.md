@@ -98,6 +98,31 @@ Nous étions obligé de suspendre l'opération juste après le flashage et de re
 à la fin du Flah, la machine donne à la carte une adresse ip que voici 172.18.41.199.
 Après avoir Flasher la carte, nous allons ajouter les proxy de la fac en editant le fichier .bashrc.
 Maintenant, nous pouvons lancer la postInstallation qui va telecharger des paquets depuis internet. Toutesfois, certains telechargements n'ont pas marché. Nous avons fait ça manuellement dans la carte avant de pouvoir continuer.
+Voici entre autres quelques bibliothéques téléchargées par JETPACK L4T:
+
+- Common
+	- Tegra Graphics Debugger
+	- Tegra System Profiler
+	- Documentation
+	- VisionWorks pack On Host
+		- VisionWorks on Host
+		- VisionWorks Plus On Target
+		- VisionWorks Objects Trackers on Host
+		- VisionWorks References
+- GameWorks Samples 
+- For Jetson TK1
+	- CUDA Toolkit for Ubuntu 14.04
+	- Linux for Tegra(TK1)
+	- CUDA Toolkit for L4T
+	- Compile GameWorks Sample
+	- Compile CUDA Sample
+	- PerfKit CuDNN Package
+	- OpenCV for Tegra
+	- VisionWorks Pack On TK1 Target
+		- VisionWorks On Target
+		- VisionWorks Plus(SFM) On Target
+		- VisionWorks Objects Tracking On Target
+
 #### Problème5: problème de flash de la carte (1).
 	Pour resoudre definitivement le problème de proxy, nous avons editer le fichier .bashrc et nous lui avons ajouter à la fin les lignes suivantes.
 
@@ -120,8 +145,8 @@ echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern
 ### Seance 8: 
 ## III - Cahier de Charge
 ### Séance 4 & 5: Redaction du cahier de charge
-La redaction a été rédigé sur Sharelatex.
-Reunion avec les encadrants & quelques recherches concernant le problème rencontré.
+- La redaction a été faite sur Sharelatex.
+- Reunion avec les encadrants & quelques recherches concernant le problème rencontré.
 
 
 
@@ -134,7 +159,7 @@ Reunion avec les encadrants & quelques recherches concernant le problème rencon
 
 
 
-Nous avons juste reinventer la roue pour implementer le principe du tresold d'abord en c++(utilisant la librairie Opencv) et ensuite en cuda. 
+Nous avons juste réinventer la roue pour implementer le principe du tresold d'abord en c++(utilisant la librairie Opencv) et ensuite en cuda. 
 Le principe est simple, nous comparons les valeurs des pixels d'image par rapport à un seuil donné. si la valeur est superieur au seuil le pixel est mis en blanc sinon en noir. l'image resultant est alors une image blanc-noire.
 
 ## 1.1 - Implementation C++
