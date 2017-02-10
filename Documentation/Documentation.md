@@ -217,6 +217,22 @@ les 3 etapes pour
 
 Nous prenons un simple exemple de multiplication de deux matrices qui disponible sur le site de tensorflow. 
 
+
+```import tensorflow as tf
+
+#construction du graphe de calcul
+matrix1 = tf.constant([[3., 3.]])
+matrix2 = tf.constant([[2.],[2.]])
+product = tf.matmul(matrix1, matrix2)
+
+#Lancement du graphique dans une session
+with tf.Session() as sess:
+	print sess.run(product)
+
+#Lancement du graphique dans une session distribué
+with tf.Session("grpc://localhost:2222") as sess:
+	print sess.run(product)
+	```
 ### TFlearn
 ### Tegra
 
