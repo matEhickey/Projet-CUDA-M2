@@ -141,5 +141,5 @@ echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern
 ### Tegra
 
 
-## Au delà
+## VII - Au delà
 ## Application pour la reconnaissance des signes des mains
