@@ -211,9 +211,9 @@ Par exemple, il est courant de créer un graphe pour représenter et former un r
 TensorFlow peut être utilisé à partir de programmes C, C ++ et Python. Il est actuellement beaucoup plus facile d'utiliser la bibliothèque Python pour assembler des graphiques, car il fournit un grand nombre de fonctions auxiliaires non disponibles dans les bibliothèques C et C ++.
 
 les 3 etapes pour 
-1- Construction du graphique
-2- Lancement du graphique dans une session
-3- Lancement du graphique dans une session distribuée
+##### a - Construction du graphique
+##### b - Lancement du graphique dans une session
+##### c - Lancement du graphique dans une session distribuée
 
 Nous prenons un simple exemple de multiplication de deux matrices qui disponible sur le site de tensorflow. 
 
