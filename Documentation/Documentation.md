@@ -233,7 +233,7 @@ with tf.Session() as sess:
 #Lancement du graphique dans une session distribué
 with tf.Session("grpc://localhost:2222") as sess:
 	print sess.run(product)
-	```
+```
 ### TFlearn
 ### Tegra
 
