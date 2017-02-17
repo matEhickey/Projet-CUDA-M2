@@ -1,24 +1,36 @@
 # Introduction
-Tensorflow est le framework destiné aux chercheurs en machine-learning, développé par Google (Open-source depuis 2015).  
-Il permet de créer des modèles performants, de manière rapide et flexible, et organisé en graphes de flows (qui permettent une visualisation pour optimisation via [tensorboard](https://www.tensorflow.org/versions/r0.11/how_tos/summaries_and_tensorboard/index.html)).  
+TensorFlow est un système de programmation dans lequel les calculs sont représentés sous forme de graphiques. Les nœuds du graphe sont appelés ops (abréviation de opérations). Un op prend zéro ou plus Tensors, effectue un certain calcul, et produit zéro ou plus Tensors. Dans la terminologie TensorFlow, un Tensor est un tableau multidimensionnel typé. Par exemple, on peut représenter un mini-lot d'images en tant que tableau 4-D de nombres en virgule flottante avec des dimensions [lot, hauteur, largeur, canaux].
 
-Les graphes contiennent des noeuds qui permettent des opérations, ou des liens entre noeuds, qui contiennent des tableaux multidimensionnels (des tenseurs).  
-Les tenseurs sont des representations matricielles pour l'entrainement de réseaux neuronnaux car ils permettents d'applattir facilement les dimensions, et ainsi, optimise la complexité.  
+Un graphique TensorFlow est une description des calculs. Pour calculer quoi que ce soit, un graphique doit être lancé dans une session. Une session place les opérations graphiques sur les périphériques, comme les CPU ou les GPU, et fournit des méthodes pour les exécuter. Ces méthodes renvoient des tenseurs produits par des ops en tant qu'objets numpy ndarray en Python, et comme des instances tensorflow :: Tensor en C et C ++.  
 
-Tensorflow est capable de déployer ses modèles sur de nombreuses architecture matérielles (mobiles, avec/sans GPU, serveurs).  
-Tensorflow est une librairie Python, mais il est prévu pour pouvoir réaliser facilement un bindings dans n'importe quel langage en codant un add-on en C++.  
 
-## Installation  
+# Structure d'un programme
 
-### Classique:  
-    rergergre  
-    gregergr  
-    
-### Docker:
-fzefefezfze  
-fzefzefez
+Les programmes TensorFlow sont généralement structurés en une phase de construction, qui assemble un graphe, et une phase d'exécution qui utilise une session pour exécuter des opérations dans le graphe.
 
-### Procédure Jetson TK1
-zefefzefz  
-fzefzefezfz
+Par exemple, il est courant de créer un graphe pour représenter et former un réseau neuronal dans la phase de construction, puis exécuter à plusieurs reprises un ensemble d'opérations d'apprentissage dans le graphe dans la phase d'exécution.
+
+TensorFlow peut être utilisé à partir de programmes C, C ++ et Python. Il est actuellement beaucoup plus facile d'utiliser la bibliothèque Python pour assembler des graphiques, car il fournit un grand nombre de fonctions auxiliaires non disponibles dans les bibliothèques C et C ++.
+
+
+Nous prenons un simple exemple de multiplication de deux matrices qui disponible sur le site de tensorflow. 
+
+```python
+import tensorflow as tf
+
+#construction du graphe de calcul
+matrix1 = tf.constant([[3., 3.]])
+matrix2 = tf.constant([[2.],[2.]])
+product = tf.matmul(matrix1, matrix2)
+
+#Lancement du graphique dans une session
+with tf.Session() as sess:
+	print sess.run(product)
+
+#Lancement du graphique dans une session distribué
+with tf.Session("grpc://localhost:2222") as sess:
+	print sess.run(product)
+```
+
+
 

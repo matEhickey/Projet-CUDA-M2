@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Mathias DIDIER">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Traitement d'image - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Traitement d'image";
+    var mkdocs_page_input_path = "traitementImage.md";
+    var mkdocs_page_url = "/traitementImage/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../connexions/">Connexions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cpu_gpu/">CPU/GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architectures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cuda/">CUDA</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../frameworks/">Frameworks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tensorflow/">Tensorflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../applications/">Applications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Traitement d'image</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#traitement-dimage">Traitement D'image</a></li>
+                
+                    <li><a class="toctree-l4" href="#threshold">Threshold.</a></li>
+                
+                    <li><a class="toctree-l4" href="#coutours">Coutours</a></li>
+                
+                    <li><a class="toctree-l4" href="#backgroud-remover">Backgroud Remover</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../signRecognition/">Reconnaissance des signes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ressources/">Ressources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../outils/">Outils</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../sceances/">Scéances</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installations/">Installations</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Traitement d'image</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/traitementImage.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="traitement-dimage">Traitement D'image</h1>
+<p>Parmi les proof of concept, étant donner que les autres travaillait avec CUDA en C++, j'ai décider de faire avec le langage Python, et la librairie <a href="https://documen.tician.de/pycuda/">PyCuda</a>.<br />
+Pycuda permet d'executer des kernels materiels écrit en C++, mais dispose également d'un binding, que je n'ai pas (encore) utilisé: limiter le code C++ a la fonction materielle me suffisant, l'interet du python est alors de structurer simplement le reste du programme, nottament les interfaces.<br />
+Nos proof of concept ne se font pas sur des versions optimisés des algorythmes, mais il se font cependant avec le même calcul, juste le GPU execture le traitement en parralele.  </p>
+<p>Nous avons appliqué les traitements du Threshold et de la détection de contours sur l'image suivante, et le retrait du fond avec nos webcams.  </p>
+<p><img alt="Beeple" src="../img/beepleCover.jpg" />  </p>
+<h2 id="threshold">Threshold.</h2>
+<p>Nous avons juste reinventer la roue pour implementer le principe du tresold d'abord en C++(utilisant la librairie Opencv) et ensuite en CUDA. 
+Le principe est simple, nous comparons les valeurs des pixels d'image par rapport à un seuil donné. si la valeur est superieur au seuil le pixel est mis en blanc sinon en noir. l'image resultant est alors une image blanc-noire.</p>
+<h3 id="implementation-cpu">Implementation CPU</h3>
+<p>Pour la partie C++ ce n'était pas trop compliqué. Nous avons en effet chargé l'image et ensuite comparé les valeurs de chaque pixel au seuil (seuil = 128) et par la suite construit la nouvelle matrice de pixel et enfin enregistré. Nous avons très vite eu notre nouvelle image qui est bien blanc-noir.</p>
+<h3 id="implementation-gpu">Implémentation GPU</h3>
+<p>Pour la partie Cuda nous avons eu à gérer plusieurs choses. Nous avons d'abord chargé la matrice de pixels envoyé vers le device.la comparaison du pixel avec le seuil et l'affection de la nouvelle de pixel se font dans le code du kernel. Nous enfin récupérer la nouvelle matrice de pixel pour stocker l'image final. A chaque nous avons traité les exceptions moyennant le type d’exception cudaError_t predéfinies dans Cuda. Voici quelques cas dans lesquels nous avons traité ces exceptions 
+- pendant l'allocation de la matrice de pixel s'executant côté matériel (cudaMalloc):</p>
+<ul>
+<li>
+<p>pendant la copie de la matrice (host -&gt;device) tout comme (device -&gt; host) (CudaMemcpy)</p>
+</li>
+<li>
+<p>après l'execution du kernel, nous nous assurons que l'exécution s'est bien passé 
+(CudaGetLastError: méthode qui retourne les erreurs s'ils en existe)</p>
+</li>
+<li>
+<p>pour l'affichage de les exceptions, nous utilisons la fonction CudaGetErrorString() sur notre type d'erreur.</p>
+</li>
+</ul>
+<p><img alt="Fond" src="../img/thresholdCPU.jpg" />  </p>
+<h2 id="coutours">Coutours</h2>
+<p>Pour la detection de contours, j'ai décider d'utiliser PyCuda pour implémenter le traitement, car nous utiliserons Python pour le projet final, et pycuda s'utilise comme Cuda C++ :<br />
+on écrit une fonction kernel, et on l'appel depuis python. Lors de la premiere execution, le kernel est compilé, et est réutilisé les fois d'après.  </p>
+<h3 id="implementation-cpu_1">Implémentation CPU</h3>
+<pre><code>def contoursDetectCPU(pix):
+    seuil = 20
+
+    pixRes = np.zeros(pix.shape)
+    x = pix.shape[0]
+    y= pix.shape[1]
+
+    for j in range(1,y-1):
+        temp = []
+        for i in range(1,x-1):
+
+            diffX = sum(pix[i-1][j])-sum(pix[i+1][j])
+            diffY = sum(pix[i][j-1])-sum(pix[i][j+1])
+
+            if(diffX &gt; seuil)or(diffY &gt; seuil):
+                col = (0,0,0)
+            else:
+                col = (255,255,255)
+            pixRes[i][j] = col
+    return(pixRes)
+</code></pre>
+
+<h3 id="implementation-gpu_1">Implémentation GPU</h3>
+<pre><code>#fonction kernel
+mod = SourceModule(&quot;&quot;&quot;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+__global__ void contour(float *im,float* res, int* x, int* y)
+{
+int seuil = 20;
+int size = int(x)*3;
+int begin = threadIdx.x*3;
+
+for(int j = 1; j&lt;1000-1;j+=10){
+    for(int i = 3; i &lt; size-3 ;i+=10*3){
+        int idx = i+begin + (threadIdx.y*1000*3) + (j*1000*3);
+
+        int caseD = idx + 3; int caseG = idx - 3; int caseH = idx - (1000*3); int caseB = idx + (1000*3);
+
+        int diffX = abs(im[caseD]+im[caseD+1]+im[caseD+2]-(im[caseG]+im[caseG+1]+im[caseG+2]));
+        int diffY = abs(im[caseH]+im[caseH+1]+im[caseH+2]-(im[caseB]+im[caseB+1]+im[caseB+2]));
+
+        if((diffX&gt;seuil)&amp;&amp;(diffY&gt;seuil)){
+            res[idx] = 0;  res[idx+1] = 0; res[idx+2] = 0;
+        }
+        else{
+            res[idx] = 255; res[idx+1] = 255; res[idx+2] = 255;
+        }
+    }
+}
+
+
+
+}
+&quot;&quot;&quot;)
+
+def contoursDetectCPU(pix):
+    pixRes = np.zeros(pix.shape)
+    x = np.int32(pix.shape[0])
+    y = np.int32(pix.shape[1])
+
+    # converti en float simple precision
+    pix = pix.astype(np.float32)
+
+    # alloue memoire gpu
+    im_gpu = cuda.mem_alloc(pix.nbytes)
+    res_gpu = cuda.mem_alloc(pix.nbytes)
+    x_gpu = cuda.mem_alloc(sys.getsizeof(x))
+    y_gpu = cuda.mem_alloc(sys.getsizeof(y))
+
+    # transfer array args
+    cuda.memcpy_htod(im_gpu, pix)
+    cuda.memcpy_htod(res_gpu, np.empty_like(pix))
+
+    func = mod.get_function(&quot;contour&quot;)
+    func(im_gpu, res_gpu, x , y , block=(10,100,1))
+    result = np.empty_like(pix)
+
+    cuda.memcpy_dtoh(result, res_gpu)
+    return(result)
+</code></pre>
+
+<h3 id="resultats">Résultats</h3>
+<p>L'implementation du detecteur de contours s'éxecute en X ms sur CPU et Y ms sur GPU pour une image. Encore une fois la méthode est basique, et nos nouvelles connaissances nous permettrait de faire mieux (Produit de convolution d'un certain filtre, le produit de convulution ayant surement des optimisations majeurs sur CPU et GPU. Nos résultats sont donc représentatif par rapport a leurs implémentions seulement.)<br />
+<img alt="Contours" src="../img/contoursGPU.jpg" />  </p>
+<h2 id="backgroud-remover">Backgroud Remover</h2>
+<h3 id="implementation-cpu_2">Implémentation CPU</h3>
+<pre><code>def bgRemoveCPU(bg,pix):
+    seuil = 10
+    pixRes = np.zeros(pix.shape)
+    x,y = (pix.shape[0],pix.shape[1])
+
+    for j in range(1,y):
+        for i in range(1,x):
+            diff = abs(sum(pix[i][j])/3-sum(bg[i][j]/3))
+
+            if(diff &gt; seuil):    col = pix[i][j]
+            else:                col = (255,255,255)
+
+            pixRes[i][j] = col
+
+    return(pixRes)
+</code></pre>
+
+<h3 id="implementation-gpu_2">Implémentation GPU</h3>
+<pre><code>#fonction kernel
+mod = SourceModule(&quot;&quot;&quot;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+__global__ void bgremove(float *bg, float * im,float* res, int* x, int* y)
+{
+int seuil = 10;
+int size = int(x)*3;
+int begin = threadIdx.x*3;
+
+for(int j = 1; j&lt;1000-1;j+=10){
+    for(int i = 3; i &lt; size-3 ;i+=10*3){
+        int idx = i+begin + (threadIdx.y*1000*3) + (j*1000*3);
+
+        int intIm = (im[idx]+im[idx+1]+im[idx+2])/3;
+        int intBG = (bg[idx]+bg[idx+1]+bg[idx+2])/3;
+
+        int diff = abs(intIm - intBG);
+
+        if(diff&gt;seuil){
+            res[idx] = im[idx]; res[idx+1] = im[idx+1]; res[idx+2] = im[idx+2];
+
+        }
+        else{
+            res[idx] = 255; res[idx+1] = 255; res[idx+2] = 255;
+        }
+    }
+}
+
+
+
+}
+&quot;&quot;&quot;)
+
+def bgRemoveGPU(pixBG,pixIm):
+
+
+    print &quot;debut algo gpu&quot;
+    t0 = time.time()
+
+    x = np.int32(pixBG.shape[0])
+    y = np.int32(pixBG.shape[1])
+
+    # converti en float simple precision
+    pixBG = pixBG.astype(np.float32)
+    pixIm = pixIm.astype(np.float32)
+
+    # alloue memoire gpu
+    BG_gpu = cuda.mem_alloc(pixBG.nbytes)
+    im_gpu = cuda.mem_alloc(pixIm.nbytes)
+    res_gpu = cuda.mem_alloc(pixBG.nbytes)
+    x_gpu = cuda.mem_alloc(sys.getsizeof(x))
+    y_gpu = cuda.mem_alloc(sys.getsizeof(y))
+
+    # transfer array args
+    cuda.memcpy_htod(BG_gpu, pixBG)
+    cuda.memcpy_htod(im_gpu, pixIm)
+    cuda.memcpy_htod(res_gpu, np.empty_like(pixBG))
+
+    func = mod.get_function(&quot;bgremove&quot;)
+    func(BG_gpu, im_gpu,res_gpu,x , y , block=(10,100,1))
+    result = np.empty_like(pixBG)
+
+    cuda.memcpy_dtoh(result, res_gpu)
+
+    tn = abs(t0-time.time())
+    print &quot;fin algo gpu en &quot;,tn, &quot; s&quot;
+    return(result)
+</code></pre>
+
+<h3 id="resultats_1">Resultats</h3>
+<p>Mon implémentation s'éxecute en X ms sur CPU et Y ms sur GPU, cependant le résultat est moyen, et ne fonctionne pas en mode viédeo pour une raison qui m'échappe..  </p>
+<p>Fond:<br />
+<img alt="Fond" src="../img/bg1.jpeg" />  </p>
+<p>Image a traiter:<br />
+<img alt="Image totale" src="../img/imTest2.jpeg" />  </p>
+<p>Image sans le fond:<br />
+<img alt="BgRemove" src="../img/bgRemoveCPU1.jpg" />  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../optimisation/" class="btn btn-neutral float-right" title="Optimisation GPU">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../applications/" class="btn btn-neutral" title="Applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../applications/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../optimisation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

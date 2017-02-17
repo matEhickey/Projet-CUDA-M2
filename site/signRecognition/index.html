@@ -70,7 +70,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../flashage/">Installation TK1</a>
+        <a class="" href="../connexions/">Connexions</a>
         
     </li>
 <li>
@@ -118,6 +118,27 @@
 <li>
           
             <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traitementImage/">Traitement d'image</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
+        
+    </li>
+<li>
+          
+            <li>
     <li class="toctree-l1 current">
         <a class="current" href="./">Reconnaissance des signes</a>
         
@@ -125,11 +146,16 @@
             
                 <li class="toctree-l3"><a href="#langage-des-signes">Langage des signes</a></li>
                 
-                    <li><a class="toctree-l4" href="#outils">Outils</a></li>
+                    <li><a class="toctree-l4" href="#premiere-iteration">Première itération</a></li>
                 
-                    <li><a class="toctree-l4" href="#workflow">Workflow</a></li>
+            
+                <li class="toctree-l3"><a href="#deuxieme-iteration">Deuxième itération</a></li>
                 
-                    <li><a class="toctree-l4" href="#premiers-resultats">Premiers Résultats</a></li>
+                    <li><a class="toctree-l4" href="#traitements-dimage-utilises">Traitements d'image utilisés</a></li>
+                
+                    <li><a class="toctree-l4" href="#cascade-haar-viola-and-jones">Cascade Haar / Viola and Jones</a></li>
+                
+                    <li><a class="toctree-l4" href="#definition-du-besoin">Définition du besoin</a></li>
                 
             
             </ul>
@@ -154,6 +180,20 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../sceances/">Scéances</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installations/">Installations</a>
         
     </li>
 <li>
@@ -196,15 +236,16 @@
                 <h1 id="langage-des-signes">Langage des signes</h1>
 <p>Mise en place d'un classifieur d'images pour distinguer les différentes lettres du langages des signes francais, et en réaliser une transcription automatique.</p>
 <p>Il sera, dans un premier temps, classifié les lettres distinguables sans mouvements (le traitement d'images étant moins complexe que le traitement vidéo), et sans les mots/phrases qui possèdent un signe/mouvements chacuns</p>
-<h2 id="outils">Outils</h2>
+<h2 id="premiere-iteration">Première itération</h2>
+<h3 id="outils">Outils</h3>
 <p>Tensorflow<br />
 <a href="https://sites.google.com/site/autosignlan/source/image-data-set">Dataset</a><br />
 Training : <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/image_retraining/retrain.py">retrain.py</a><br />
 Eval : <a href="https://github.com/llSourcell/tensorflow_image_classifier/blob/master/src/py/label_dir.py">label.py</a>  </p>
-<h2 id="workflow">Workflow</h2>
+<h3 id="workflow">Workflow</h3>
 <p>Utilisation de docker pour développement indépendant de la machine hôte (dans mon cas, depuis windows).<br />
 Le probleme de docker est qu'il ne peut tirer parti du GPU (sur windows!, sur les systemes compatibles, il existe <a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a>, à tester sur la Jetson donc.)  </p>
-<h3 id="docker-quick-start-terminal">Docker (quick start terminal):</h3>
+<h4 id="docker-quick-start-terminal">Docker (quick start terminal):</h4>
 <pre><code>docker run -it gcr.io/tensorflow/tensorflow:latest-devel   # Crée un container docker qui contient la derniere version de tensorflow/tensorflow  
 mkdir /tf_files   # Crée un dossier pour récuperer les fichiers utiles  
 exit   # Quite la vm pour y lier les tf_files
@@ -227,7 +268,7 @@ python tensorflow/examples/image_retraining/retrain.py \
 # Lance la prédiction
 python /tf_files/label.py /tf_files/sign/&lt;number&gt;.jpg
 </code></pre>
-<h3 id="contenu-de-tf_files">Contenu de tf_files</h3>
+<h4 id="contenu-de-tf_files">Contenu de tf_files</h4>
 <pre><code>sign/  
     A/  
     B/  
@@ -245,7 +286,7 @@ splitData.py   # Coupe les données de train
 sudo apt-get install imagemagick
 convert *.ppm %d.jpg
 </code></pre>
-<h2 id="premiers-resultats">Premiers Résultats</h2>
+<h3 id="premiers-resultats">Premiers Résultats</h3>
 <p>Une classification sur 3 signes distincts avec environ 100 images pour chaque cas d'entrainement mene a une exactitude (final test accuracy) de 94%  </p>
 <p>D'autres campagnes de tests automatisés seronts à réaliser pour produire des schémas de performances de ce modeles, pour essayer d'en trouver les faiblesses dans notre contexte de la reconnaissance du langages des signes, pour enfin essayer d'augmenter les performances de classification. 
 Les tests s'avèrents relativememnt bons sur le meme dataset (mais des images qu'il n'as pas appris), cependant, apres un test sur une image de l'exterieur du dataset, les resultats sont médiocres.<br />
@@ -256,6 +297,59 @@ A tester donc.</p>
 Installation de docker sur ubuntu <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">3 versions</a> ou <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04">16.04</a><br />
 <a href="https://github.com/NVIDIA/nvidia-docker">Installation de nvidia-docker</a><br />
 <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/docker">Tensorflow image on nvidia-docker</a>  </p>
+<h1 id="deuxieme-iteration">Deuxième itération</h1>
+<p>Nos premiers essais de classifications des signes étaient un echec, cependant nous nous attendions a ce résultat, mais il fallait commencer par la pour avancer.<br />
+L'idée était de mettre en place un classifier d'image quelquonque (nous avons utilisé le (...retail?) de tensorflow) sur un dataset trouvé sur internet comportant des images de signes.<br />
+Nous avons fait des essais sur des données d'apprentissages variés, mais peu nombreuses (50aine de photos, séparés en 3 signes distincts.)
+En séparant le corpus en corpus de tests et d'apprentissage, les résultats semblait plutot bons (~60%), cependant, les essais réels était médiocre (non mesurés, mais je dirai maximum 5 % de bonnes classifications).<br />
+Nous avons déduit de cette expérience que les données d'apprentissages importe énormement sur la classification, et que les conditions/environements de capture sont très influents.<br />
+Il nous faudra donc faire du traitement d'image, pour, a minima retirer le maximum de fond de l'image, et si possible, couper les parties de l'image des mains pour les isoler, et y appliquer des traitements, pour le training, et la classification.<br />
+On espere aussi réduire la taille des données en entrée du systeme pour permetre des calculs plus rapide.</p>
+<h2 id="traitements-dimage-utilises">Traitements d'image utilisés</h2>
+<h3 id="grayscale">Grayscale</h3>
+<p>Le passage des images en niveau de gris permet de grandement diminuer la taille de celle-ci, en revanche ce traitement est destructif pour des informations qui peuvent être capitale.<br />
+On appliquera ainsi ce traitement, mais pas forcément au début de la chaine de traitement.  </p>
+<h3 id="blur-gauss">Blur-Gauss</h3>
+<p>Application d'un filtre qui permet de flouter legerement l'image. Cela nous permet de diminuer les détails bruités de l'images, pour se concentrer sur les formes plus importantes.<br />
+<img alt="Blur" src="../img/blur.jpg" /></p>
+<h3 id="bg-remove">BG-Remove</h3>
+<p>Ce traitement permet d'extraire l'information qui n'est pas immobile sur l'image.<br />
+Elle se base sur la capture de plusieurs trames, et une soustraction des pixels qui n'ont pas changé, avec un certain controle par des parametres de réglages.<br />
+Cette technique consomme relativement peu de ressource par rapport au gain d'espace de travail utile.<br />
+L'utilisation de cette technique permet également un affinage en fonction du temps. En effet, lorsque l'utilisateur arrive dans l'image, la zone analysé est assez grande, mais celle ci se reduit très vite car l'utilisateur bouge peu ( relativement a la main qu'il présente a la caméra )  </p>
+<h3 id="contoursconvex-hullboundingbox">Contours/Convex Hull/Boundingbox</h3>
+<p>L'algorithme de recherche des contours permet de trouver des zones des couleurs semblables, et tracer leurs coutours.  </p>
+<p><img alt="Contours" src="../img/contours.png" /></p>
+<p>A partir de ces resultats, on peut extraire les convex-hull. Il s'agit de détourer au mieux une forme, en retirant ainsi beaucoup d'information (les coutours détaillés) en conservant celle qui nous intéressents.<br />
+<img alt="ConvexHull" src="../img/convexHull.png" />  </p>
+<p>A partir de ces zones sont facilement extrayable les boudings-box (zones rectangle ou éllipsoïdales), qui bornent les zones qui nous interressents. En dilattant les convex hull, ou les bounding-box, on permet d'etre plus large sur l'image que l'on va scrop.  </p>
+<p><img alt="BoundingBox" src="../img/Bounding1.png" />
+<img alt="BoundingBox2" src="../img/Bounding2.png" />  </p>
+<h2 id="cascade-haar-viola-and-jones">Cascade Haar / Viola and Jones</h2>
+<p>L'agorithme de detection en cascade est une technique de reconnaissance d'objet dans une image.<br />
+Cet algorithme est utilisé depuis 2001 pour la localisation de visages dans les images. Cependant, il peut apprendre a localiser n'importe quel type d'objets, et de trouver les bounding boxes des objets qu'on lui aura fait apprendre.  </p>
+<p>Elle se base sur le calcul des zones de couleurs d'ondelettes, et un entrainement permettant de déduire un modele de vraisemblance pour ces ondelettes.<br />
+Le calcul semble a premiere vu énorme, mais en convertissant dans un format addapté pour ce calcul, il se fait en 4 opérations basiques.  </p>
+<p>Ainsi il nous permettrait, soit de remplacer notre modele précédent (bg remove/convexhull, meme si aucun traitement concernant les mains n'était encore incorporé), soit le renforcer (avant ou apres, ou en prenant une décision par rapport aux réponses des 2 systemes.)  </p>
+<p>De plus, les versions a l'état de l'art l'utilisent de facon cascade (Cascade Classifier), ce qui nous permettrait aussi de faire la reconnaissance à proprement parler des signes de la main.  </p>
+<p><img alt="Viola1" src="../img/viola.png" /> 
+<img alt="Viola2" src="../img/viola2.png" /> 
+<img alt="Viola3" src="../img/viola3.png" /> </p>
+<h3 id="implementation-python-et-gpu">Implémentation Python et GPU:</h3>
+<p>Avec les librairiesPython <a href="https://github.com/Itseez/opencv">OpenCV</a> et <a href="https://github.com/alexanderkoumis/opencv-gpu-py">OpenCV GPU</a>, détecter des objets avec un fichier d'entrainement est très facile:  </p>
+<pre><code>if cv2gpu.is_cuda_compatible():  
+    cv2gpu.init_gpu_detector(cascade_file_gpu)  # training file
+
+detections = cv2gpu.find_faces(image_file)
+</code></pre>
+<h2 id="definition-du-besoin">Définition du besoin</h2>
+<p>Il nous maintenant faire des essais de la meilleure combinaison de systemes.<br />
+L'impact du sens d'application des traitements étant importants et peu prévisible, cela demanderais trop de temps et nous allons faire un maximum d'essais, en fonction de nos prévisions.<br />
+Cependant rien ne nous indique que nous optiendrons le meilleur modèle.  </p>
+<p>Il faut enfin créer un programme de création de dataset a l'aide de webcam, pour obtenir plus de données d'entrainement.<br />
+Ce programme n'étant pas a priori compliqué, il faut néanmoins qu'il soit facilement parametrable pour créer des datasets de tailles variables (pour nos tests, et pour un déployement imaginable).<br />
+On pourrait nottament penser a une interface de parametrage par l'utilisateur de ces datasets. Il pourrait ainsi ajouter lui meme des signes dont nous ignorons l'existence.</p>
+<p>Il nous faut définir des campagnes de tests adaptés pour juger nos systèmes, et nos datasets, cependant, je ne pense pas qu'on ai le temps de tester les datasets ( j'imagine qu'en comparant la vraisemblance avec les modeles déja appris on pourrais filtrer les cas ou l'utilisateur s'es trompé, mais on sors du  cadre du projet). En revanche, il faut qu'on puisse tester automatiquement les systemes. </p>
               
             </div>
           </div>
@@ -266,7 +360,7 @@ Installation de docker sur ubuntu <a href="https://docs.docker.com/engine/instal
         <a href="../ressources/" class="btn btn-neutral float-right" title="Ressources">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../applications/" class="btn btn-neutral" title="Applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reduction/" class="btn btn-neutral" title="Optimisation/Reduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -294,7 +388,7 @@ Installation de docker sur ubuntu <a href="https://docs.docker.com/engine/instal
           <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../applications/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../reduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../ressources/" style="color: #fcfcfc">Next &raquo;</a></span>

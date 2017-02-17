@@ -70,7 +70,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../flashage/">Installation TK1</a>
+        <a class="" href="../connexions/">Connexions</a>
         
     </li>
 <li>
@@ -134,6 +134,27 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../traitementImage/">Traitement d'image</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../signRecognition/">Reconnaissance des signes</a>
         
     </li>
@@ -156,6 +177,20 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../sceances/">Scéances</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installations/">Installations</a>
         
     </li>
 <li>
@@ -232,7 +267,12 @@ Peut être utilisé pour accélerer le travail d'autre frameworks de machine lea
 <a href="https://developer.nvidia.com/opencv">OpenCV</a></p>
 <hr />
 <h2 id="frameworks_1">Frameworks</h2>
-<p>Exemples de code pour résoudre le probleme de classification de <a href="http://yann.lecun.com/exdb/mnist/">mnist</a></p>
+<p>Nous avons étudié différents frameworks GPU pour déterminer nos besoins réels pour notre application finale.<br />
+Notre choix se portait initialement sur Tensorflow, qui est le cador actuel dans le domaine de l'IA, et qui nous a été fortement conseillé, cependant nous voulions tester ses concurents pour justifier l'utilisation de Tensorflow.<br />
+Pour la rapidité des différents essais, ainsi que la préservation du systeme, nous avons décidé d'utilisé la plateforme Docker, qui nous permet l'installation de mini-vm préconfiguré avec les logiciels nécessaire a nos besoins.<br />
+Cependant, ces tests se faisant sur les heures personelles, nous utilisions docker, et non nvidia-docker qui ne fonctionne pas sur Windows, ainsi, l'utilisation des GPU n'était pas possible, de toute facon, le but étant de comparer les frameworks d'inteligence entre eux, les resultats de classifications (et la simplicité avec laquelle les programmes se codent) nous interessais plus que les temps d'éxecutions.<br />
+Nous avons estimé, que notre probleme (transcription des signes), est assez proche du probleme de classification d'image mnist, qui consiste a classifier des chiffres écrit à la main.<br />
+Exemples de code pour résoudre le probleme de classification de <a href="http://yann.lecun.com/exdb/mnist/">mnist</a></p>
 <h3 id="caffe">Caffe</h3>
 <p>Deep-learning framework, optimisé pour GPU<br />
 <a href="http://caffe.berkeleyvision.org/">Caffe</a><br />
@@ -254,16 +294,32 @@ Peut être utilisé pour accélerer le travail d'autre frameworks de machine lea
 <a href="https://github.com/torch/demos/blob/master/train-a-digit-classifier/dataset-mnist.lua">mnist torch</a><br />
 <a href="https://hub.docker.com/r/kaixhin/torch/">docker</a>  </p>
 <h3 id="tensorflow">Tensorflow</h3>
-<p>Librairie de machine utilisant les ressources matérielles au mieux (possibilité de calculs distribués sur plusieurs GPU).<br />
+<p>Tensorflow est le framework d'inteligence porté par Google, il semble le framework le plus complet, avec des tas de fonctionnalités et domaines d'application.<br />
+La communauté est très active et de nombreuses ressources sont déja disponibles.<br />
+Tensorflow est prévu pour le déployement sur de nombreux type de machines, comme les serveurs distribués, les ordinateurs personnels, ou encore les smartphones, que la machine dispose d'un GPU ou non.<br />
 <a href="http://tensorflow.org">Tensorflow</a><br />
 <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/mnist/mnist.py">mnist tensorflow</a><br />
 <a href="https://hub.docker.com/r/tensorflow/tensorflow/">docker</a>  </p>
 <h3 id="keras">Keras</h3>
-<p>Keras est une librairies haut niveau utilisant Tensorflow ou Theanos, pour expérimenter des réseaux neuronaux de manière rapide et instinctive.<br />
+<p>Keras est une surcouche utilisant ou Tensorflow, ou Theano, en simplifiant grandement l'écriture du code.<br />
+En effet, le paradygmes par flow et tenseur est assez compliqué a imaginer, et encore plus à mettre en place.<br />
+Avec Keras, la mise en place est simplifié au maximum, ne reste que les soucis de modélisation de notre problèmes.<br />
 <a href="https://keras.io/">Keras</a><br />
 <a href="https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py">mnist keras</a><br />
 <img alt="sortie kerras mnist" src="../img/kerrasMnist.png" />
 <a href="https://hub.docker.com/r/gw000/keras/">docker</a></p>
+<h3 id="tflearn">Tflearn</h3>
+<p>TFLearn fourni une interface à tensorflow de manière simplifé.<br />
+Le code est beaucoup lisible, compréhensible, et est améliorable avec du vrai code Tensorflow au besoin.  </p>
+<h3 id="opencv_1">OpenCV</h3>
+<p>Après les résultats, plutot mauvais que nous ayons obtenu avec les classifiers d'images simples pour nos datasets d'images de mains, nous avons décider d'améliorer les images avec des pré-prétraitements, qui nous permettraient d'utiliser d'analyser des zones plus discriminantes de l'image, et avec des dimensions plus petites, ce qui devrait améliorer nos résultats, et les vitesses d'entrainements/de classification.<br />
+Nous avons commencer par regarder les solutions que propose Nvidia (Nvidia Vision-works), mais nous avons trouvés des résultats comparatifs (Fichier a retrouver!!!)[.] et Vision-works est pour la majorité des problèmes plus lent que la version GPU de OpenCV, qui lui, est open-source, dispose d'une très large communauté, et possède des bindings dans de nombreux langages. 
+On voit sur ce document que Nvidia-VisionWorks est surtout fait pour détecter des angles mouveant sur des flux vidéos.<br />
+J'ai donc décidé d'essayer les versions C++, Java(via processing), et Python de OpenCV.<br />
+Mon choix final se porte sur Python, car le groupe de projet maitrise bien ce langage, et que si nous utilisons Tensorflow, Tflearn, Keras etc, nous serions amener a le faire en Python.<br />
+L'amélioration de la vitesse des traitements via la version C++ étant minime, je préfere l'écarter du au temps nécessaire pour développer.<br />
+Enfin, la version Java était très bien, surtout grace processing, qui simplifie grandement la pratique de Java pour des applications graphiques, ainsi que par sa communauté.  </p>
+<p>Ne distinguant aucune réelle différence dans les API en fonction du langage utilisé, j'ai décider pour définir le modèle des traitements en processing, car les modifications de codes et tests sont les plus rapides, et lorsque le modele nous semblera fonctionnel, de le porter sur Python.  </p>
 <h2 id="see-also">See Also</h2>
 <p><a href="https://developer.nvidia.com/gpu-accelerated-libraries">Liste de librairies accélérées par GPU</a><br />
 <a href="https://developer.nvidia.com/deep-learning-frameworks">Liste de frameworks</a>

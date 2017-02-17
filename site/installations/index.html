@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Mathias DIDIER">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Installations - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installations";
+    var mkdocs_page_input_path = "installations.md";
+    var mkdocs_page_url = "/installations/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../connexions/">Connexions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cpu_gpu/">CPU/GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architectures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cuda/">CUDA</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../frameworks/">Frameworks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tensorflow/">Tensorflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../applications/">Applications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traitementImage/">Traitement d'image</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../signRecognition/">Reconnaissance des signes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ressources/">Ressources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../outils/">Outils</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../sceances/">Scéances</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Installations</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#machine-host">Machine Host</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#jetson-tk1">Jetson TK1</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installations</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/installations.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="machine-host">Machine Host</h1>
+<p>site du telechargement d'ubuntu 14.04.* (version compatible jetpack le 14/08/16) :
+http://releases.ubuntu.com/trusty/</p>
+<p>choisir la version compatible avec le processeur ( amd64/i386)</p>
+<p>ubuntu-14.04.4-desktop-amd64.iso    <br />
+ubuntu-14.04.4-desktop-i386.iso</p>
+<p>site de telechargement jetpack dernière version disponible 
+https://developer.nvidia.com/embedded/downloads</p>
+<p>documentation concernant la création de la clé bootable  :</p>
+<p>la clé bootable qe nous avons utilisé à été créée sur ubuntu 16.04 avec l'utilitaire Startup Disk Creator.
+la clé à été formatée au format FAT32.  </p>
+<p>installation de l'host :</p>
+<p>Sur la machine fournie qui nous sert d'host : 
+-&gt; accès au bios (afin de changer le boot order pour mettre la clé usb avant les autres) F10
+(la clé doit être branchée afin de la faire apparaitre dans le boot order)</p>
+<p>choix de la langue : anglais</p>
+<pre><code>install ubuntu
+
+-download update during installing (pas séléctionner car internet nous faisait défaut)
+-install third-party software
+
+-erase disk and install ubuntu
+-selectionner time-zone and keyboard configuration
+-ubuntu
+</code></pre>
+<p>premier lancement de la jetson tk1 voir le QuickStartGuide : aucun soucis</p>
+<p>installation ubuntu  </p>
+<p>14.04.5-desktop-amd64.iso</p>
+<p>faire un checksum à l'aid de la commande md5 et comparer le numéro avec celui sur le site d'ubuntu</p>
+<p>formattage en FAT32, start up disk creator</p>
+<p>installation normale</p>
+<p>utilisateur : m2
+pwd     :   toto</p>
+<h1 id="jetson-tk1">Jetson TK1</h1>
+<p>Flashage a l'aide de Nvidia Jetpack
+L4T OS</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../sceances/" class="btn btn-neutral" title="Scéances"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../sceances/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

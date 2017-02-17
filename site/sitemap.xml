@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/introduction/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,15 +20,15 @@
     
     <url>
      <loc>/tk1/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/flashage/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <loc>/connexions/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>/cpu_gpu/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>/architecture/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>/cuda/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
      <loc>/frameworks/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -68,7 +68,7 @@
     
     <url>
      <loc>/tensorflow/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -76,7 +76,31 @@
     
     <url>
      <loc>/applications/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/traitementImage/</loc>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/optimisation/</loc>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/reduction/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -84,7 +108,7 @@
     
     <url>
      <loc>/signRecognition/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -92,7 +116,7 @@
     
     <url>
      <loc>/ressources/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -100,7 +124,7 @@
     
     <url>
      <loc>/outils/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -108,7 +132,23 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2016-11-25</lastmod>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/sceances/</loc>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/installations/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

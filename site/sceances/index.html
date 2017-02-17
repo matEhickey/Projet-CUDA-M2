@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Mathias DIDIER">
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Scéances - Développement d’applications sous processeur graphique (GPU / CUDA).</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sc\u00e9ances";
+    var mkdocs_page_input_path = "sceances.md";
+    var mkdocs_page_url = "/sceances/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Introduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tk1/">Jetson TK1</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../connexions/">Connexions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cpu_gpu/">CPU/GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../architecture/">Architectures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cuda/">CUDA</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../frameworks/">Frameworks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tensorflow/">Tensorflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../applications/">Applications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traitementImage/">Traitement d'image</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../signRecognition/">Reconnaissance des signes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ressources/">Ressources</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../outils/">Outils</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Scéances</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#seance1-mise-en-place-des-outils-pour-la-gestion-du-projet">Séance1: Mise en place des outils pour la gestion du Projet.</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#seance2installation-de-ubuntu">Séance2:Installation de Ubuntu.</a></li>
+                
+                    <li><a class="toctree-l4" href="#probleme1-probleme-dinstallation-de-ubuntu">Probléme1: problème d'installation de ubuntu.</a></li>
+                
+                    <li><a class="toctree-l4" href="#seance3telechargement-de-jetpackl4t-et-installation">Séance3:Telechargement de JetPackL4T et installation.</a></li>
+                
+                    <li><a class="toctree-l4" href="#seance4installation-de-jetpackl4t-flashage-de-la-carte">Séance4:Installation de JetPackL4T &amp; flashage de la carte.</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#seance-6-installation-et-flashage-de-la-carte-jetson-tk-1">seance 6: Installation et Flashage de la carte JETSON TK-1.</a></li>
+                
+                    <li><a class="toctree-l4" href="#probleme5-probleme-de-flash-de-la-carte-1">Problème5: problème de flash de la carte (1).</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#seance-7activation-des-4-cpu-de-la-carte">Seance 7:activation des 4 cpu de la carte.</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#seance-8">Seance 8:</a></li>
+                
+                    <li><a class="toctree-l4" href="#seance-4-5-redaction-du-cahier-de-charge">Séance 4 &amp; 5: Redaction du cahier de charge</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installations/">Installations</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Développement d’applications sous processeur graphique (GPU / CUDA).</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Scéances</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/matEhickey/Projet-CUDA-M2/edit/master/docs/sceances.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="seance1-mise-en-place-des-outils-pour-la-gestion-du-projet">Séance1: Mise en place des outils pour la gestion du Projet.</h2>
+<p>Mise en place de l'environnement
+- github
+- sharelatex
+- Trello
+- création de groupe facebook</p>
+<h2 id="seance2installation-de-ubuntu">Séance2:Installation de Ubuntu.</h2>
+<ul>
+<li>téléchargement du fichier image depuis le site du telechargement d'ubuntu 14.04.* (version compatible jetpack le 14/08/16) :
+http://releases.ubuntu.com/trusty/ </li>
+<li>
+<p>choix de la version compatible avec le processeur ( amd64/i386)
+ ubuntu-14.04.4-desktop-amd64.iso    <br />
+ ubuntu-14.04.4-desktop-i386.iso</p>
+</li>
+<li>
+<p>on peut verifier si le fichier est bien téléchargé (pas endomagé). Pour se faire, nous utilisons la commande md5 dans mac ou linux (Commande: sudo md5 nom_fichier_image). elle (la commande) traite l'entrée et renvoie un numéro qui est à comparer avec le site de téléchargement.</p>
+</li>
+<li>avant de commencer l'installation assurez-vous de flasher ce fichier dans une clé Usb ou de le graver dans un cd ou dvd, pour pouvoir booter dessus(demarrer le système)</li>
+<li>modifier l'ordre de boot du systéme dans le menu BIOS( mettre USB en premier).
+ accès au bios (afin de changer le boot order pour mettre la clé usb avant les autres) F10 (la clé doit être branchée afin de la faire apparaitre dans le boot order)</li>
+</ul>
+<p>Voici quelques étapes de l'installation
+- choix de la langue : anglais
+- install ubuntu
+- download update during installing (pas séléctionner car internet nous faisait défaut)
+- install third-party software
+- erase disk and install ubuntu
+- selectionner time-zone and keyboard configuration
+- ubuntu</p>
+<h4 id="probleme1-probleme-dinstallation-de-ubuntu">Probléme1: problème d'installation de ubuntu.</h4>
+<pre><code>liée au blockage de téléchargement des paquets par le serveur de l'université
+Utilisation des CheckSum pour verifer l'integrité du fichier Image.
+</code></pre>
+<h3 id="seance3telechargement-de-jetpackl4t-et-installation">Séance3:Telechargement de JetPackL4T et installation.</h3>
+<h4 id="probleme2-probleme-de-telechargement-des-paquets-jetpack">Probléme2: problème de téléchargement des paquets JetPack.</h4>
+<pre><code>ce problème est lié au problèmes de proxy.
+</code></pre>
+<h3 id="seance4installation-de-jetpackl4t-flashage-de-la-carte">Séance4:Installation de JetPackL4T &amp; flashage de la carte.</h3>
+<p>Voici quelques étapes suivi durant l'installation de JetPackL4T.</p>
+<ul>
+<li>
+<p>téléchargement du fichier d'installation du JETPACK depuis le site internet de nvidia : https://developer.nvidia.com/embedded/downloads
+    NB: Il faut avoir un compte pour pouvoir télécharger JetPack.</p>
+</li>
+<li>
+<p>A la base le fichier n'a pas de droit d'execution. Nous lui ajoutons donc le droit d'execution avec la Commande suivante: --- chmod +x nomfichier.run</p>
+</li>
+<li>
+<p>Et enfin nous lançons l'execution de ce fichier avec la commande suivante : </p>
+</li>
+<li>./nomfichier.run 
+    NB: soyez sur que la carte est branché à la machine qui execute ce programme et qu'elle est également connecté à internet.</li>
+</ul>
+<h4 id="probleme3-probleme-dinstallation-des-paquets-jetpack">Probléme3: problème d'installation des paquets JetPack.</h4>
+<pre><code>La connexion internet bloque systématiquement le téléchargement de paquets depuis internet si le proxy de la fac n'est pas correctement renseigné.
+</code></pre>
+<p>l'installation ne marche pas. Pour se faire, nous avons les commandes suivantes 
+- sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com votre_n°_de_clé
+- sudo apt-get update --fix-missing</p>
+<p>pour garder certains dependence lorsque le upgrade les supprimes.
+- sudo apt-get dist-upgrade</p>
+<p>Les proxy ne marchent toujours pas. Il faut le forçer en utilisant les commandes ci-dessous.</p>
+<ul>
+<li>cd /etc/apt/apt.conf.d/</li>
+<li>touch 95proxies</li>
+<li>Acquire::http::proxy "adresse";</li>
+<li>Acquire::ftp::proxy "adresse";</li>
+<li>Acquire::https::proxy "adresse";</li>
+</ul>
+<p>Toutes ces tentatives n'aboutissent à rien. Mais après avoir reglé le proxy, le téléchargement marche correctement. Ci - dessous les commande pour regler le proxy.</p>
+<ul>
+<li>sudo su "on saisit le mot de passe"</li>
+<li>export http_proxy='adresse à saisir'</li>
+<li>export https_proxy='adresse à saisir'</li>
+<li>export ftp_proxy='adresse à saisir'</li>
+</ul>
+<h4 id="probleme4-probleme-de-flash-de-la-carte">Problème4: problème de flash de la carte.</h4>
+<pre><code>la machine n'arrive pas à donner une adresse ip à la carte car celle-ci n'est pas connu par le réseau. Nous avons essayer plusieurs techniques en vain. Il a fallu faire part à l'administrateur reseau pour résoudre ce probleme. Ci-dessous quelques commande qu'on a utilisé mais qui n'ont pas abouti.
+</code></pre>
+<p>sudo dhclient eth0
+ifconfig eth0 192.168.0.1
+gestion de l'adresse ip: enter cette commande sur un terminal dans la machine hote après qu'elle ai été demarré.
+setxkbmap fr</p>
+<h2 id="seance-6-installation-et-flashage-de-la-carte-jetson-tk-1">seance 6: Installation et Flashage de la carte JETSON TK-1.</h2>
+<p>Nous avons recommencer les etapes de la séance 3 qui se sont interrompués à cause du proxy et continuer. JETSON TK-1 telecharge plusieurs fichiers depuis internet pour son fonctionnement interne. Mais il s'arrête à cause du proxy.</p>
+<p>Nous étions obligé de suspendre l'opération juste après le flashage et de recommencer à partir de la postInstallation.
+à la fin du Flah, la machine donne à la carte une adresse ip que voici 172.18.41.199.
+Après avoir Flasher la carte, nous allons ajouter les proxy de la fac en editant le fichier .bashrc.
+Maintenant, nous pouvons lancer la postInstallation qui va telecharger des paquets depuis internet. Toutesfois, certains telechargements n'ont pas marché. Nous avons fait ça manuellement dans la carte avant de pouvoir continuer.
+Voici entre autres quelques bibliothéques téléchargées par JETPACK L4T:</p>
+<ul>
+<li>Common<ul>
+<li>Tegra Graphics Debugger</li>
+<li>Tegra System Profiler</li>
+<li>Documentation</li>
+<li>VisionWorks pack On Host<ul>
+<li>VisionWorks on Host</li>
+<li>VisionWorks Plus On Target</li>
+<li>VisionWorks Objects Trackers on Host</li>
+<li>VisionWorks References</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GameWorks Samples </li>
+<li>For Jetson TK1<ul>
+<li>CUDA Toolkit for Ubuntu 14.04</li>
+<li>Linux for Tegra(TK1)</li>
+<li>CUDA Toolkit for L4T</li>
+<li>Compile GameWorks Sample</li>
+<li>Compile CUDA Sample</li>
+<li>PerfKit CuDNN Package</li>
+<li>OpenCV for Tegra</li>
+<li>VisionWorks Pack On TK1 Target<ul>
+<li>VisionWorks On Target</li>
+<li>VisionWorks Plus(SFM) On Target</li>
+<li>VisionWorks Objects Tracking On Target</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="probleme5-probleme-de-flash-de-la-carte-1">Problème5: problème de flash de la carte (1).</h4>
+<pre><code>Pour resoudre definitivement le problème de proxy, nous avons editer le fichier .bashrc et nous lui avons ajouter à la fin les lignes suivantes.
+</code></pre>
+<p>http_proxy "adresse"
+ftp_proxy "adresse"
+https_proxy "adresse"
+Après avoir resolu ce problème l'installation ne s'interromp pas et le flashage est effectif.</p>
+<h2 id="seance-7activation-des-4-cpu-de-la-carte">Seance 7:activation des 4 cpu de la carte.</h2>
+<p>Par defaut un seul CPU est actif. Pour activer les 3 autres, nous utilisons les commandes ci-dessous.</p>
+<p>echo 0 &gt; /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/enable
+echo 1 &gt; /sys/devices/system/cpu/cpu0/online
+echo 1 &gt; /sys/devices/system/cpu/cpu1/online
+echo 1 &gt; /sys/devices/system/cpu/cpu2/online
+echo 1 &gt; /sys/devices/system/cpu/cpu3/online
+echo performance &gt; /sys/devices/system/cpu/cpu0/cpufreq/scaling_govern</p>
+<h2 id="seance-8">Seance 8:</h2>
+<h3 id="seance-4-5-redaction-du-cahier-de-charge">Séance 4 &amp; 5: Redaction du cahier de charge</h3>
+<ul>
+<li>La redaction a été faite sur Sharelatex.</li>
+<li>Reunion avec les encadrants &amp; quelques recherches concernant le problème rencontré.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installations/" class="btn btn-neutral float-right" title="Installations">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/matEhickey/Projet-CUDA-M2" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installations/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

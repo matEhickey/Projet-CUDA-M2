@@ -72,6 +72,10 @@ mkdocs build
 
 ## Sharelatex
 _Plateforme de redaction d'articles collaborative basé sur Latex_  
+~~~~
+compte => projet.cuda@laposte.net
+mdp => projetcuda2016 
+~~~~
 [Sharelatex](http://sharelatex.com)  
 [Latex syntax](https://wch.github.io/latexsheet/)  
 

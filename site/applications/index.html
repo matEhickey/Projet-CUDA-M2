@@ -70,7 +70,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../flashage/">Installation TK1</a>
+        <a class="" href="../connexions/">Connexions</a>
         
     </li>
 <li>
@@ -121,18 +121,35 @@
             
                 <li class="toctree-l3"><a href="#applications-possibles">Applications possibles</a></li>
                 
-                    <li><a class="toctree-l4" href="#vehicule-autonome">Véhicule autonome</a></li>
+                    <li><a class="toctree-l4" href="#optimisation-pure">Optimisation Pure</a></li>
                 
-                    <li><a class="toctree-l4" href="#distributeur-de-boissons">Distributeur de boissons</a></li>
+                    <li><a class="toctree-l4" href="#traitements-dimage">Traitements d'image</a></li>
                 
-                    <li><a class="toctree-l4" href="#detecteur-dhumain">Detecteur d'humain</a></li>
-                
-                    <li><a class="toctree-l4" href="#detection-de-visages-ou-dexpressions">Detection de visages ou d'expressions</a></li>
-                
-                    <li><a class="toctree-l4" href="#traitement-video-temps-reel">Traitement video temps réel</a></li>
+                    <li><a class="toctree-l4" href="#transcription-du-lsf">Transcription du LSF</a></li>
                 
             
             </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traitementImage/">Traitement d'image</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../optimisation/">Optimisation GPU</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../reduction/">Optimisation/Reduction</a>
         
     </li>
 <li>
@@ -161,6 +178,20 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../sceances/">Scéances</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installations/">Installations</a>
         
     </li>
 <li>
@@ -200,18 +231,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="applications-existantes">Applications existantes</h1>
-<p>Une liste d'applications en production ou en développement : <a href="http://www.nvidia.fr/object/gpu-computing-applications-fr.html">Lien</a></p>
+                <p>Nous avons travaillé sur plusieurs facettes du développement GPU.<br />
+Nous avons dans un premier temps étudier les applications déja existantes pour savoir ce qui était possible ou non, en fonction de notre expérience et budget.  </p>
+<h1 id="applications-existantes">Applications existantes</h1>
+<p>Une liste d'applications en production ou en développement : <a href="http://www.nvidia.fr/object/gpu-computing-applications-fr.html">Lien</a><br />
+Nous remarquons dans cette liste la forte étendue du champs d'apllication des GPU. De l'analyse de donnéee, au traitement d'image, en passant par le militaire ou le médicale, la puissance apporté par les cartes graphiques contribue a l'avancée dans de nombreux domaines.  </p>
 <h1 id="applications-possibles">Applications possibles</h1>
-<p>Nous listons ici nos différents points de recherches des applications réalisables avec notre équipe</p>
-<h3 id="vehicule-autonome">Véhicule autonome</h3>
-<p>blqblabla</p>
-<h3 id="distributeur-de-boissons">Distributeur de boissons</h3>
-<p>Rangement de cannettes automatique</p>
-<h3 id="detecteur-dhumain">Detecteur d'humain</h3>
-<p>Detection d'humain present sur une image</p>
-<h3 id="detection-de-visages-ou-dexpressions">Detection de visages ou d'expressions</h3>
-<h3 id="traitement-video-temps-reel">Traitement video temps réel</h3>
+<p>Nous listons ici nos différents centre d'intérets et de recherches.</p>
+<h3 id="optimisation-pure">Optimisation Pure</h3>
+<p>Une partie de notre travail de recherche a été de pousser l'otimisation d'un maximale du temps d'éxecution d'un calcul générique.  </p>
+<h3 id="traitements-dimage">Traitements d'image</h3>
+<p>Nous nous sommes amusés a recréer certains algorythmes de traitement d'images basiques, pour comparer leurs temps d'execution sur les versions processeurs et les versions GPU.  </p>
+<h3 id="transcription-du-lsf">Transcription du LSF</h3>
+<p>Comme projet de démonstration final, et avec les connaissances que nous avons acquise lors d ela premiere partie du projet, nous pensons être capable de réaliser un transcripteur du langage des signes francais, dans une version simplifié. En effet, le traitement se faisant sur des images et non des vidéos, certains signes ne seronts compréhensible par le systeme, dans sa version simple.<br />
+Aussi, n'ayant ni l'experience dans le langage des singes, ni le temps ou l'interet de l'apprendre, nous nous contenterons de traiter les signes correspondant a l'alphabet du LSF.<br />
+<img alt="LSF" src="../alphabet_lsf.png" /></p>
               
             </div>
           </div>
@@ -219,7 +253,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../signRecognition/" class="btn btn-neutral float-right" title="Reconnaissance des signes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../traitementImage/" class="btn btn-neutral float-right" title="Traitement d'image">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../tensorflow/" class="btn btn-neutral" title="Tensorflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -253,7 +287,7 @@
         <span><a href="../tensorflow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../signRecognition/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../traitementImage/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

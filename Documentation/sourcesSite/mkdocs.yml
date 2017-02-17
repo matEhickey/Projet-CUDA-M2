@@ -8,15 +8,20 @@ pages:
 - Home: index.md
 - Introduction: introduction.md
 - Jetson TK1: tk1.md
-- Installation TK1: flashage.md
+- Connexions: connexions.md
 - CPU/GPU: cpu_gpu.md
 - Architectures: architecture.md
 - CUDA: cuda.md
 - Frameworks: frameworks.md
 - Tensorflow: tensorflow.md
 - Applications: applications.md
+- Traitement d'image: traitementImage.md
+- Optimisation GPU: optimisation.md
+- Optimisation/Reduction: reduction.md
 - Reconnaissance des signes: signRecognition.md
 - Ressources: ressources.md
 - Outils: outils.md
 - About: about.md
+- Scéances: sceances.md
+- Installations: installations.md
 theme: readthedocs
