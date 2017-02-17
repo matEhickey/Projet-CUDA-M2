@@ -265,10 +265,10 @@ Les conditions suivantes peuvent résulter en un accès non-coalescé, le rendan
 </ul>
 <h3 id="acces-sequentiel-et-aligne">Accès séquentiel et aligné</h3>
 <p>Ici l'accès est séquentiel et aligné, il est donc coalescé.</p>
-<p>Accès séquentiel et aligné: <img alt="Alt" src="https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/asa.png?raw=true" /> </p>
+<p>Accès séquentiel et aligné: <img alt="Alt" src="../img/asa.png" /> </p>
 <h3 id="acces-aligne-mais-non-sequentiel">Accès aligné mais non séquentiel</h3>
 <p>Ici l'accès n'est pas séquentiel mais aligné. Sur certaines architectures, principalement les plus anciennes ce genre d'acès ne peut pas être effectué en une seule transaction.</p>
-<p>Accès aligné mais non séquentiel: <img alt="Alt" src="https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/nca.png?raw=true" /></p>
+<p>Accès aligné mais non séquentiel: <img alt="Alt" src="../img/nca.png" /></p>
 <h3 id="acces-memoire-non-aligne">Accès mémoire non aligné</h3>
 <p>Dans ce cas, l'accès à la mémoire est bien séquentiel mais non aligné, du coup il nous faut une transaction de plus pour charger la derniere valeur si l'alignement mémoire est de 128 Bytes.</p>
 <h4 id="lalignement">L'alignement</h4>
@@ -286,7 +286,7 @@ cudaMalloc((void**)&amp;ptr2,bytes);
 
 <p>En supossant que l'adresse retourné par ptr1 est un multiple de 512, alors l'adresse retournée dans ptr2 seras au minimun (ptr1 + 512).
 Cette restriction est imposé par le device sur lequel la mémoire est alloué, principalement pour des raisons de performances.</p>
-<p>Accès non aligné: <img alt="Alt" src="https://github.com/matEhickey/Projet-CUDA-M2/blob/master/Documentation/img/uma.png?raw=true" /></p>
+<p>Accès non aligné: <img alt="Alt" src="../img/uma.png" /></p>
 <h5 id="exemple_1">Exemple</h5>
 <p>Un accès en mémoire coalescé ressemble à ce genre de code. </p>
 <pre><code>shared_memory[threadIdx.x]= global_memory[blockIdx.x*blockDim.x + threadIdx.x];
