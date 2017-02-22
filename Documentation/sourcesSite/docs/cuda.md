@@ -85,16 +85,18 @@ L'execution du kernel peut être réalisée totalement indépendament de l'execu
 
 ![](/img/host_device.png "Host and device")	
 
-Une application commence par executer le concernant l'host CPU, ensuite l'host invoque un kernel GPU sur le device GPU.Le GPu execute ce kernel en parallel en utilisant de multiples threads.Lorsque le kernel completeson exécution, le CPU reprend son execution du programme d'origine.
+Une application commence par executer le concernant l'host CPU, ensuite l'host invoque un kernel GPU sur le device GPU. Le GPU execute ce kernel en parallèle en utilisant de multiples threads. Lorsque le kernel complete son exécution, le CPU reprend son execution du programme d'origine.
 (il est possible d'executer plusieur kernel ou bien de ne pas attendre sa fin pour continuer l'exeuction du host, nous détaillerons ceci dans la partie Stream et synchronisation).
 
-### Kernel
+### Kernels
 
-CUDA C hérite du C en permettant aux programmers de définir des fonction C, appelées kernels, qui lorsqu'elle sont appellées, sont executées N fois en parallele par N différents threads CUDA, contrainrement à une fois seulement en C.
+CUDA C hérite du C en permettant aux programmers de définir des fonction C, appelées kernels, qui lorsqu'elle sont appellées, sont executées N fois en parallele par N différents threads CUDA, contrainrement à une fois seulement en C. Un kernel est tout simplement une fonction exécutée sur le GPU.
 
 #### Définir un kernel
 
-Un kenerl est définit en utilisant le mot-clé __global__.
+Un kernel peut être défini de 2 façons différentes avec les mots clés __global__ et __device__.
+Le mot clé __global__ signifie que c'est une fonction qui est appelée par le CPU mais exécutée par le GPU alors que le mot clé __device__ signifie que c'est une fonction qui est appelée par le GPU et exécutée par le GPU.
+Pour ces fonctions, il n'y a pas de récursion possible, pas de variables statiques et pas de liste de paramètres variable autorisés.
 
 ~~~
 
@@ -108,6 +110,7 @@ __global__ void VecAdd(float* A, float* B, float* C)
 ~~~
 
 #### Invoquer un Kernel
+
 Invoquer un kernel GPU est très similaire à l'appel d'une fonction. CUDA utilise une synthaxe à base de chevron afin de configurer et d'exectuer un kernel. 
 Il faut donc lui indiquer le nombre de blocs et le nombre de threads à utiliser.
 
@@ -117,14 +120,17 @@ int main()
 {
     ...
     // Invocation de Kernel avec N threads sur 1 bloc
-    VecAdd<<<1, N>>>(A, B, C);
+    VecAdd<<<nbBlocs, nbThreadParBlocs>>>(A, B, C);
     ...
 }
 
 ~~~
 
-Ici chaqu'un des N threads executant VecAdd() performent une addition.
+nbBlocs correspond au nombre de subdivisions que l'on créé dans la grid (voir section ci-dessus) alloué au kernel.
+threadsParBloc correspond au nombre de threads que l'on créé pour chaque bloc.
+Ici chacun des threads executant VecAdd() performent une addition.  
 
+Ces paramètres doivent être choisi judicieusement par le programmeur cat la performance du programme en dépend. En effet le choix de ces paramètres dépend du problème que l'on veut résoudre et de la puissance du GPU. S'il y a un mauvais choix des paramètres, un trop petit/grand nombres de blocs ou un trop petit/grand nombre de threads, il peut y avoir une perte de performances.
 
 ### Grid
 
@@ -193,7 +199,18 @@ Ce numéro de version permet d'identifier le nombre de feature supporté par le 
 Les appareils ayant la même architecture diposent du même niveau de revision.
 Liste des capacités selon les versions : http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capabilities
 
+#### Compilation
 
+NVIDIA fournit un compilateur spécialement prévu pour CUDA. Ce compilateur se nomme nvcc, il effectue toutes les étapes de la compilation c'est à dire l'assemblage, la compilation et l'edition des liens.
+Vou pouvez utiliser la ligne de commande suivante pour compiler :
+
+~~~
+
+nvcc monprogramme.cu -o monprogramme.out
+
+~~~
+
+Vous pouvez utiliser aussi les makefile car le compilteur CUDA fonctionne très bien avec ceux-ci.
 
 
 
