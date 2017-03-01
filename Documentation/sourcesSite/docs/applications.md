@@ -14,6 +14,6 @@ Une partie de notre travail de recherche a été de pousser l'optimisation d'un 
 Nous nous sommes amusés a recréer certains algorithmes de traitement d'images basiques, pour comparer leurs temps d'execution sur les versions processeurs et les versions GPU.  
 
 ### Transcription du LSF
-Comme projet de démonstration final, et avec les connaissances que nous avons acquise lors d ela premiere partie du projet, nous pensons être capable de réaliser un transcripteur du langage des signes francais, dans une version simplifié. En effet, le traitement se faisant sur des images et non des vidéos, certains signes ne seronts compréhensible par le systeme, dans sa version simple.  
-Aussi, n'ayant ni l'experience dans le langage des singes, ni le temps ou l'interet de l'apprendre, nous nous contenterons de traiter les signes correspondant a l'alphabet du LSF.  
+Comme projet de démonstration final, et avec les connaissances que nous avons acquise lors de la premiere partie du projet, nous pensons être capable de réaliser un transcripteur du langage des signes francais, dans une version simplifié. En effet, le traitement se faisant sur des images et non des vidéos, certains signes ne seronts compréhensible par le systeme, dans sa version simple.  
+Aussi, n'ayant ni l'experience dans le langage des signes, ni le temps ou l'interet de l'apprendre, nous nous contenterons de traiter les signes correspondant a l'alphabet du LSF.  
 ![LSF](alphabet_lsf.png)
