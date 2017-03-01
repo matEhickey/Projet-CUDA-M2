@@ -14,7 +14,7 @@ Nous avons appliqué les traitements du Threshold et de la détection de contour
 
 ## Threshold.
 
-Nous avons juste reinventer la roue pour implementer le principe du tresold d'abord en C++(utilisant la librairie Opencv) et ensuite en CUDA. 
+Nous avons juste reinventer la roue pour implementer le principe du thresold d'abord en C++(utilisant la librairie Opencv) et ensuite en CUDA. 
 Le principe est simple, nous comparons les valeurs des pixels d'image par rapport à un seuil donné. si la valeur est superieur au seuil le pixel est mis en blanc sinon en noir. l'image resultant est alors une image blanc-noire.
 
 ### Implementation CPU
