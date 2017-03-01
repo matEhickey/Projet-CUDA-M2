@@ -8,10 +8,10 @@ Nous remarquons dans cette liste la forte étendue du champs d'apllication des G
 Nous listons ici nos différents centre d'intérets et de recherches.
 
 ### Optimisation Pure
-Une partie de notre travail de recherche a été de pousser l'otimisation d'un maximale du temps d'éxecution d'un calcul générique.  
+Une partie de notre travail de recherche a été de pousser l'optimisation d'un maximale du temps d'éxecution d'un calcul générique.  
 
 ### Traitements d'image
-Nous nous sommes amusés a recréer certains algorythmes de traitement d'images basiques, pour comparer leurs temps d'execution sur les versions processeurs et les versions GPU.  
+Nous nous sommes amusés a recréer certains algorithmes de traitement d'images basiques, pour comparer leurs temps d'execution sur les versions processeurs et les versions GPU.  
 
 ### Transcription du LSF
 Comme projet de démonstration final, et avec les connaissances que nous avons acquise lors d ela premiere partie du projet, nous pensons être capable de réaliser un transcripteur du langage des signes francais, dans une version simplifié. En effet, le traitement se faisant sur des images et non des vidéos, certains signes ne seronts compréhensible par le systeme, dans sa version simple.  
