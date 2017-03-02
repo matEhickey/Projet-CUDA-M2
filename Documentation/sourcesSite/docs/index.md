@@ -15,6 +15,3 @@ _faisant des calculs simple, mais de manière totalement parallèle._
 
 _L’objectif final du projet est de tendre vers l’étude de la faisabilité et la_  
 _pertinence d ’un portage C/C++ vers le langage CUDA. (Simulation vers Système)._
-
-_You **can** combine bold and italic_  
-ezfezfzefz
