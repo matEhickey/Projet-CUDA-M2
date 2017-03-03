@@ -1,0 +1,85 @@
+
+##Grille, block, threads 
+
+Chaque kernel est lancé sur une grille comportant un nombres de threads.
+Ces threads sont regroupés en blocs de taille variables mais avec une taille maximale imposée par le hardware.
+
+##Warps
+
+Les warps sont aussi des conteneurs de threads, as plus bas niveau : ils composent les blocs et sont de taille fixe (32 pour la jetson TK1).
+Les threads dans un warp doivent suivre la même ligne d'exécution, ils doivent tous executer la même instructions en même temps et ne peuvent pas diverger.
+
+##Deadlocks
+
+
+La construction de code la plus commune qui peut provoquer une divergence de thread sont les branchements conditionnels dans une instruction if-then-else. Si certains threads d'un seul warp sont évalués comme «vrais» et d'autres comme «faux», alors les threads «vrai» et «faux» se ramifient à des instructions différentes. Certains threads voudront passer à l'instruction 'then', tandis que d'autres 'else'.
+
+Intuitivement, nous pensons que les instructions seront exécutés en parallèle. Cependant, les threads dans un block ne peut pas diverger,et donc la parrallelisation est donc impossible.CUDA a une solution de contournement qui corrige le problème, mais avec des conséquences assez négatives sur la performance.
+
+Lors de l'exécution de l'instruction if-then-else, CUDA ordonne au warp d'exécuter la première partie puis de passer à la partie else. Lors de l'exécution de la premiere partie (if), tous les threads qui sont évalués à faux (else) sont désactivés. Lorsque l'exécution passe à l'état else, la situation est inversée. Les différentes instructions ne sont donc pas exécutées en parallèle, mais en série. Cette sérialisation peut entraîner une perte de performances significative.
+
+
+###Exemple de dead_lock :
+
+~~~~
+
+//my_Func_then and my_Func_else are some device functions
+if (threadidx.x <16)
+{
+	myFunc_then();
+	__syncthread();
+}else if (threadidx >=16)
+{
+	myFunc_else();
+	__syncthread();
+}
+
+~~~~
+
+La première partie execute ses instruction puis attend que la seconde partie du block atteigne __syncthread(), cependant la seconde partie ne commence jamais et par conséquent empeche la cloture de la première instruction. (Nous sommes ici avec des warps de taille > 16 threads).
+
+
+
+
+
+
+
+
+
+
+##Optimisation
+
+
+##Exemple de la reduction parrallèle
+
+L'exemple que nous avons utilié pour comprendre et appliquer les méhodes d'optimisation de CUDA et celui de la redction parrallèle :
+La reduction parrallèle consiste à assembler chaque élément d'un tableau afin de n'obtenir qu'un élément final représentant ce tableau (pour un tableau d'entier il s'agit d'une somme). C'est un exemple classique pour démontrer le pouvoir d'omptimisation de CUDA, ce qui nous as permis de recuperer aisement de la documentation sur ce sujet.
+
+
+L'implémentation se feras ici avec un tableau de taille conséquante afin de pouvoir comparer les différents niveaux d'optimisation et afin de pouvoir utiliser les mécaniques de blocs de CUDA. De plus en utilisant une taille de tableau assez grande pour occuper la totalité des threads disponibles pour notre device, nous pouvons facilement observer les gains de performances causés par une diminution de threads peu voir non actifs.
+
+
+###Accès mémoires
+
+La mémoire est constitué de plusieurs bancs et chaque banc ne peut adressé qu'une seul donnée à la fois aux différents threads.
+
+Bank    |      1      |      2      |      3      |...
+Address |  0  1  2  3 |  4  5  6  7 |  8  9 10 11 |...
+Address | 64 65 66 67 | 68 69 70 71 | 72 73 74 75 |...
+
+##Idle threads
+
+Nous cherchons le plus possible à ne pas avoir de threads actifs n'effectuant aucune tâche
+
+###Déroulage de boucle
+
+Le deroulage de boucle est une technique d'optimisation consistant à améliorer la vitesse d'execution d'un programme au dépend de sa taille binaire Cette amélioration de vitesse s'obtient en réduisant ou en élimant les actions controllant la boucle comme les pointeurs arithmétiques et les tests de fin de boucle à chaque itération, ainsi qu'en éliminant les latences de lecture en mémoire.
+
+En connaisant le nombre exact d'itérations il est possible de dérouler complétement une boucle.
+
+//Cascade d'algorithme
+
+
+##Results
+
+Comparaison TK1 / official from CUDA / 540m
